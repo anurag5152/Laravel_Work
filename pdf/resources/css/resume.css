@@ -218,6 +218,11 @@ li {
         padding: .8in
     }
 
+    .my-element {
+        margin-bottom: 10px;
+        /* applied only in PDF */
+    }
+
     a {
         color: #000;
         text-decoration: none

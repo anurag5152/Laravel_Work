@@ -206,7 +206,7 @@ li {
 }
 
 /* Print */
-@media print {
+/* @media print {
     body {
         background: #fff
     }
@@ -222,4 +222,24 @@ li {
         color: #000;
         text-decoration: none
     }
+} */
+
+@media print {
+  .entry-head {
+    display: block !important;
+  }
+  .my-element {
+    margin-bottom: 10px; /* applied only in PDF */
+  }
+  .entry-head .left {
+    display: inline-block;
+    width: 75%; /* adjust as needed */
+    vertical-align: top;
+  }
+  .entry-head .right {
+    display: inline-block;
+    width: 23%; /* adjust as needed */
+    text-align: right;
+    vertical-align: top;
+  }
 }

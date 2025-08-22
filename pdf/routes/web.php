@@ -19,5 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/resume/download', [ResumeController::class, 'download'])->name('resume.download');
-Route::get('/resume/preview', [ResumeController::class, 'preview'])->name('resume.preview');
+Route::get('/resume_1/download', [ResumeController::class, 'download'])->name('resume_1.download');
+Route::get('/resume_1/preview', [ResumeController::class, 'preview'])->name('resume_1.preview');
+
+
+Route::get('/resume_one/download', [ResumeController::class, 'downloadOne'])->name('resume_one.download');
+Route::get('/resume_one/preview', [ResumeController::class, 'previewOne'])->name('resume_one.preview');
