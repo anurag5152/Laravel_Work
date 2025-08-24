@@ -7,7 +7,7 @@
 
 
     <style>
-        /* ====== Local fonts (served from /public) ====== */
+        /* fonts */
         @font-face {
             font-family: 'Latin Modern Roman';
             src: url('/fonts/lmroman/lmroman10-regular.ttf') format('truetype');
@@ -36,7 +36,6 @@
             font-style: italic;
         }
 
-        /* ====== Page & global typography ====== */
         html,
         body {
             height: 100%
@@ -49,16 +48,13 @@
             color: #111;
             font: 15px/1.45 "Latin Modern Roman", serif;
             background: #fff;
-            /* keep PDF page white */
         }
 
-        /* PDF page box: A4 with 20mm margins */
         @page {
             size: A4 portrait;
             margin: 20mm;
         }
 
-        /* Wrapper: margins via @page; no fixed width */
         .page {
             margin-top: -40px;
             padding: 0;
@@ -116,7 +112,6 @@
             padding-bottom: 2px;
         }
 
-        /* Text & lists */
         p {
             margin: 8px 0
         }
@@ -146,7 +141,6 @@
             font-weight: 700
         }
 
-        /* Entries */
         .item {
             margin-bottom: 10px;
             width: 100%
@@ -163,7 +157,6 @@
             color: #333
         }
 
-        /* ====== DOMPDF-safe two-column heading (no grid) ====== */
         .entry-head {
             display: flex;
             align-items: flex-start;
@@ -186,10 +179,7 @@
             white-space: nowrap;
             text-align: right;
             line-height: 1.35;
-            /* tiny vertical nudge for optical alignment */
         }
-
-        /* Prevent oversized link annotation boxes in PDFs */
         a {
             display: inline-block;
         }
@@ -220,7 +210,6 @@
             </div>
         </div>
 
-        <!-- Education -->
         <section class="section">
             <h2 class="section-title" style="margin-top: -5px;">Education</h2>
 
@@ -235,7 +224,6 @@
             </div>
         </section>
 
-        <!-- Experience -->
         <section class="section">
             <h2 class="section-title" style="margin-top: -5px;">Experience</h2>
 
@@ -266,7 +254,6 @@
             </div>
         </section>
 
-        <!-- Publications -->
         <section class="section">
             <h2 class="section-title" style="margin-top: -5px;">Publications</h2>
             <div class="item">
@@ -279,7 +266,6 @@
             </div>
         </section>
 
-        <!-- Projects -->
         <section class="section">
             <h2 class="section-title" style="margin-top: -5px;">Projects</h2>
 
@@ -303,7 +289,6 @@
   // run in browser only
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-browser-style]').forEach(function(el){
-      // apply the style string from the attribute
       el.style.cssText += el.getAttribute('data-browser-style');
     });
   });

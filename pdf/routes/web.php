@@ -23,5 +23,11 @@ Route::get('/resume_1/download', [ResumeController::class, 'download'])->name('r
 Route::get('/resume_1/preview', [ResumeController::class, 'preview'])->name('resume_1.preview');
 
 
-Route::get('/resume_one/download', [ResumeController::class, 'downloadOne'])->name('resume_one.download');
-Route::get('/resume_one/preview', [ResumeController::class, 'previewOne'])->name('resume_one.preview');
+Route::get('/resume_2/download', [ResumeController::class, 'downloadTwo'])->name('resume_2.download');
+Route::get('/resume_2/preview', [ResumeController::class, 'previewTwo'])->name('resume_2.preview');
+
+Route::get('/resume_3/download', [ResumeController::class, 'downloadThree'])->name('resume_3.download');
+Route::get('/resume_3/preview', [ResumeController::class, 'previewThree'])->name('resume_3.preview');
+
+Route::get('/resume_4/download', [ResumeController::class, 'downloadFour'])->name('resume_4.download');
+Route::get('/resume_4/preview', [ResumeController::class, 'previewFour'])->name('resume_4.preview');
