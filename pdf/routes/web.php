@@ -31,3 +31,7 @@ Route::get('/resume_3/preview', [ResumeController::class, 'previewThree'])->name
 
 Route::get('/resume_4/download', [ResumeController::class, 'downloadFour'])->name('resume_4.download');
 Route::get('/resume_4/preview', [ResumeController::class, 'previewFour'])->name('resume_4.preview');
+
+
+Route::get('/resume/generate', [ResumeController::class, 'generate']);
+Route::get('/resume/generate1', [ResumeController::class, 'generate1']);
