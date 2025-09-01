@@ -3,7 +3,7 @@
     {{-- Right side image --}}
     <img src="{{ asset('images/web.png') }}"
         class="position-absolute top-20 end-0 translate-middle-x"
-        style="z-index: 0; opacity: 0.3; width: 130%; max-width: 400px;">
+        style="z-index: 0; opacity: 0.3; width: 130%; max-width: 320px;">
     <div class="container">
         <div class="mb-4 text-center">
             <h2 class="fw-bold" style="color:#4169E1;">PUBLICATIONS</h2>

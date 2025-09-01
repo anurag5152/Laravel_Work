@@ -362,18 +362,19 @@ class TemplateController extends Controller
                 'year' => 2022,
                 'link' => 'https://example.com/deep-learning'
             ],
-            [
-                'title' => 'Laravel Tips and Tricks',
-                'publisher' => 'Web Dev Magazine',
-                'year' => 2023,
-                'link' => 'https://example.com/laravel-tips'
-            ],
-            [
-                'title' => 'Advanced PHP Techniques',
-                'publisher' => 'Code Weekly',
-                'year' => 2021,
-                'link' => 'https://example.com/php-advanced'
-            ],
+            // [
+            //     'title' => 'Laravel Tips and Tricks',
+            //     'publisher' => 'Web Dev Magazine',
+            //     'year' => 2023,
+            //     'link' => 'https://example.com/laravel-tips'
+            // ],
+            // [
+            //     'title' => 'Advanced PHP Techniques',
+            //     'publisher' => 'Code Weekly',
+            //     'year' => 2021,
+            //     'link' => 'https://example.com/php-advanced'
+            // ],
+            
         ];
 
         $awards = [
