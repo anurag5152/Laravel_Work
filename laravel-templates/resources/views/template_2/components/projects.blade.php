@@ -1,6 +1,6 @@
 <section class="container-fluid py-5 position-relative">
 
-    <div class="container" style="color: #4169E1">
+    <div class="container">
         <div class="mb-4 text-center">
             <h2 class="fw-bold" style="color:#4169E1;">PROJECTS</h2>
             <hr class="border-2 mx-auto" style="border-color:#4169E1; width:220px;">
@@ -17,7 +17,7 @@
                         <h5 class="fw-bold">{{ $project['title'] }}</h5>
                         <p class="mb-2">{{ $project['short_desc'] }}</p>
                         <p class="text-muted small">{{ $project['tech_stack'] }}</p>
-                        <button class="btn btn-sm btn-primary"
+                        <button class="btn btn-sm btn-success" style="background-color: #4169E1"
                             data-bs-toggle="modal"
                             data-bs-target="#projectModal{{ $index }}">
                             View Details
@@ -29,7 +29,7 @@
             {{-- Modal for Project Details --}}
             <div class="modal fade" id="projectModal{{ $index }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content" style="background-color:#1f2937; color:white; border:2px solid #00ff66;">
+                    <div class="modal-content" style="background-color:#1f2937; color:white; border:2px solid #4169E1;">
                         <div class="modal-header">
                             <h5 class="modal-title">{{ $project['title'] }}</h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
@@ -39,7 +39,7 @@
                             <p><strong>Description:</strong> {{ $project['description'] }}</p>
                             <p><strong>Tech Stack:</strong> {{ $project['tech_stack'] }}</p>
                             @if(!empty($project['link']))
-                            <a href="{{ $project['link'] }}" target="_blank" class="btn btn-outline-success">Visit Project</a>
+                            <a href="{{ $project['link'] }}" target="_blank" class="btn btn-outline-success" style="color: #4169E1; border-color:#4169E1">Visit Project</a>
                             @endif
                         </div>
                     </div>

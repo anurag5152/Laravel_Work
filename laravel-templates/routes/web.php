@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/template', [TemplateController::class, 'show'])->name('resume.show');
+Route::get('/template1', [TemplateController::class, 'show1'])->name('resume.show1');
+Route::get('/template2', [TemplateController::class, 'show2'])->name('resume.show2');
