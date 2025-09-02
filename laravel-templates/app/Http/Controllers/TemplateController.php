@@ -362,19 +362,19 @@ class TemplateController extends Controller
                 'year' => 2022,
                 'link' => 'https://example.com/deep-learning'
             ],
-            // [
-            //     'title' => 'Laravel Tips and Tricks',
-            //     'publisher' => 'Web Dev Magazine',
-            //     'year' => 2023,
-            //     'link' => 'https://example.com/laravel-tips'
-            // ],
-            // [
-            //     'title' => 'Advanced PHP Techniques',
-            //     'publisher' => 'Code Weekly',
-            //     'year' => 2021,
-            //     'link' => 'https://example.com/php-advanced'
-            // ],
-            
+            [
+                'title' => 'Laravel Tips and Tricks',
+                'publisher' => 'Web Dev Magazine',
+                'year' => 2023,
+                'link' => 'https://example.com/laravel-tips'
+            ],
+            [
+                'title' => 'Advanced PHP Techniques',
+                'publisher' => 'Code Weekly',
+                'year' => 2021,
+                'link' => 'https://example.com/php-advanced'
+            ],
+
         ];
 
         $awards = [
@@ -431,5 +431,212 @@ class TemplateController extends Controller
 
 
         return view('template_2.template_2', compact('specialties', 'summary', 'socials', 'skills', 'education', 'projects', 'experience', 'volunteers', 'publications', 'awards', 'hobbies', 'references'));
+    }
+    public function show3()
+    {
+
+        $summary = "I'm a passionate UI designer who believes every pixel has a purpose. 
+                With an eye for aesthetics and a heart for usability, I transform 
+                complex problems into intuitive digital experiences that users actually love.
+                I'm a passionate UX/UI designer who believes every pixel has a purpose. 
+                With an eye for aesthetics and a heart for usability, I transform 
+                complex problems into intuitive digital experiences that users actually love.
+                I'm a passionate UX/UI designer who believes every pixel has a purpose. 
+                With an eye for aesthetics and a heart for usability, I transform 
+                complex problems into intuitive digital experiences that users actually love.";
+
+        $socials = [
+            'twitter' => 'https://twitter.com/username',
+            'linkedin' => 'https://linkedin.com/in/username',
+            'instagram' => 'https://instagram.com/username',
+        ];
+
+        $skills = [
+            ['name' => 'React', 'percent' => 95],
+            ['name' => 'Node.js', 'percent' => 65],
+            ['name' => 'MongoDB', 'percent' => 45],
+            ['name' => 'AWS', 'percent' => 100],
+            ['name' => 'Postman', 'percent' => 85],
+            ['name' => 'Postman', 'percent' => 86],
+            ['name' => 'Postman', 'percent' => 87],
+            ['name' => 'Postman', 'percent' => 87],
+            ['name' => 'Postman', 'percent' => 88],
+            ['name' => 'Postman', 'percent' => 89],
+            ['name' => 'Postman', 'percent' => 81],
+        ];
+
+        $education = [
+            [
+                'university' => 'Harvard University',
+                'degree'     => 'Bachelor of Computer Science',
+                'duration'   => '2009 - 2013',
+            ],
+            [
+                'university' => 'MIT',
+                'degree'     => 'Master of Software Engineering',
+                'duration'   => '2013 - 2015',
+            ],
+            [
+                'university' => 'Stanford University',
+                'degree'     => 'PhD in Artificial Intelligence',
+                'duration'   => '2016 - 2020',
+            ],
+            [
+                'university' => 'Stanford University',
+                'degree'     => 'PhD in Artificial Intelligence',
+                'duration'   => '2016 - 2020',
+            ]
+        ];
+        $experiences = [
+            [
+                'title'       => 'Senior Full-Stack Developer',
+                'duration'    => 'March 2022 - Present',
+                'job_type'    => 'Full-Time',
+                'company'     => 'TechFlow Solutions',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location'    => 'Newyork'
+            ],
+            [
+                'title'       => 'Software Developer',
+                'duration'    => 'March 2022 - Present',
+                'job_type'    => 'Full-Time',
+                'company'     => 'StartupHub Inc.',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location'    => 'Newyork'
+            ],
+            [
+                'title'       => 'Junior Developer',
+                'duration'    => 'March 2022 - Present',
+                'job_type'    => 'Full-Time',
+                'company'     => 'CodeCraft Agency',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location'    => 'Newyork'
+            ],
+        ];
+
+        $volunteers = [
+            [
+                'title' => 'Community Teacher',
+                'duration' => 'Jan 2020 - Dec 2021',
+                'organization' => 'Local Education NGO',
+                'description' => 'Taught underprivileged children basic computer skills and English.',
+                'location' => 'New Delhi, India'
+            ],
+            [
+                'title' => 'Event Coordinator',
+                'duration' => '2018 - 2019',
+                'organization' => 'Youth Empowerment Foundation',
+                'description' => 'Organized workshops and fundraising events for skill development.',
+                'location' => 'Mumbai, India'
+            ],
+        ];
+
+        $projects = [
+            [
+                'title'       => 'Resume Builder System',
+                'short_desc'  => 'A Laravel + PhpWord based resume builder with export features.',
+                'description' => 'Built a system where users can create ATS-friendly resumes, export them to DOCX and PDF, and choose from templates.',
+                'tech_stack'  => 'Laravel, PhpWord, Bootstrap, MySQL',
+                'image'       => asset('images/grid-blue.png'),
+                'link'        => 'https://github.com/johndoe/resume-builder',
+            ],
+            [
+                'title'       => 'E-Commerce Website',
+                'short_desc'  => 'An online store with cart, checkout, and payment integration.',
+                'description' => 'Developed an e-commerce website with admin dashboard, product management, and Stripe payment integration.',
+                'tech_stack'  => 'Laravel, Alpine.js, Tailwind, MySQL',
+                'image'       => asset('images/grid-blue.png'),
+                'link'        => 'https://github.com/johndoe/ecommerce',
+            ],
+            [
+                'title'       => 'Portfolio Website',
+                'short_desc'  => 'Personal portfolio showcasing projects and skills.',
+                'description' => 'Created a responsive portfolio website with dynamic project and blog sections.',
+                'tech_stack'  => 'HTML, CSS, JavaScript, Bootstrap',
+                'image'       => asset('images/grid-blue.png'),
+                'link'        => 'https://johndoe.dev',
+            ],
+        ];
+        $publications = [
+            [
+                'title'       => 'Designing Scalable Web Applications',
+                'authors'     => 'John Doe',
+                'journal'     => 'International Journal of Computer Science',
+                'year'        => '2023',
+                'description' => 'A study on scalable architectures for high-traffic web applications.',
+                'link'        => 'https://example.com/publication1'
+            ],
+            [
+                'title'       => 'AI in Modern UI/UX',
+                'authors'     => 'Jane Smith',
+                'journal'     => 'UI/UX Innovation Conference',
+                'year'        => '2022',
+                'description' => 'Exploring the role of AI in creating adaptive user interfaces.',
+                'link'        => 'https://example.com/publication2'
+            ],
+        ];
+
+        $awards = [
+            [
+                'title'       => 'Best UI Designer',
+                'organization' => 'Design Summit 2023',
+                'year'        => '2023',
+                'description' => 'Awarded for outstanding creativity and innovation in user interface design.'
+            ],
+            [
+                'title'       => 'Employee of the Year',
+                'organization' => 'TechFlow Solutions',
+                'year'        => '2022',
+                'description' => 'Recognized for leading multiple successful projects and mentoring juniors.'
+            ],
+            [
+                'title'       => 'Innovation in AI',
+                'organization' => 'AI Expo',
+                'year'        => '2021',
+                'description' => 'Honored for building AI-driven tools enhancing UX adaptability.'
+            ],
+        ];
+
+        $hobbies = [
+            [
+                'name' => 'Photography',
+                'icon' => 'bi-camera', // Bootstrap Icon class
+                'description' => 'Capturing nature and street photography during travels.'
+            ],
+            [
+                'name' => 'Reading',
+                'icon' => 'bi-book',
+                'description' => 'Exploring books on psychology, technology, and history.'
+            ],
+            [
+                'name' => 'Cycling',
+                'icon' => 'bi-bicycle',
+                'description' => 'Long rides during weekends to stay fit and adventurous.'
+            ],
+            [
+                'name' => 'Gaming',
+                'icon' => 'bi-controller',
+                'description' => 'Competitive eSports and casual gaming with friends.'
+            ],
+        ];
+
+        $references = [
+            [
+                'name'       => 'Ankit Raj',
+                'position'   => 'Assistant Director',
+                'company'    => 'Labour Department',
+                'email'      => 'ankit.raj@example.com',
+                'phone'      => '+91 9876543210',
+            ],
+            [
+                'name'       => 'Priya Sharma',
+                'position'   => 'HR Manager',
+                'company'    => 'TechFlow Solutions',
+                'email'      => 'priya.sharma@example.com',
+                'phone'      => '+91 9988776655',
+            ],
+        ];
+
+        return view('template_3.template_3', compact('summary', 'socials', 'skills', 'education', 'experiences', 'volunteers', 'projects', 'publications', 'awards', 'hobbies', 'references'));
     }
 }

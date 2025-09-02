@@ -6,14 +6,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Template 2 - Alex River</title>
-
-    <!-- Aldrich font (used on screenshot) -->
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Alpine -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style>
@@ -39,8 +35,6 @@
         }
 
 
-
-        /* centered fixed-width wrapper like your provided template */
         .wrap {
             display: flex;
             justify-content: center;
@@ -53,8 +47,6 @@
             padding: 0 36px;
             box-sizing: border-box;
         }
-
-        /* header (simple top nav like your sample) */
         header {
             display: flex;
             align-items: center;
@@ -74,7 +66,6 @@
             font-size: 18px;
         }
 
-        /* MAIN HERO LAYOUT: 3-column grid (visual / center / right) */
         .hero {
             display: grid;
             grid-template-columns: 480px 1fr 320px;
@@ -84,14 +75,12 @@
             position: relative;
         }
 
-        /* LEFT visual stack */
         .visual {
             position: relative;
             height: 560px;
             overflow: visible;
         }
 
-        /* big blue rectangle behind (top-left) */
         .visual .bg-blue {
             position: absolute;
             left: -125px;
@@ -103,7 +92,6 @@
             border-radius: 2px;
         }
 
-        /* white->gray box (right to left) sitting partly under image */
         .visual .bg-gray {
             position: absolute;
             left: 160px;
@@ -115,7 +103,6 @@
             border-radius: 2px;
         }
 
-        /* profile image sits above both */
         .visual img.profile {
             position: absolute;
             left: 152px;
@@ -127,7 +114,6 @@
             display: block;
         }
 
-        /* CENTER: name, subtitle, headline (headline should sit under image area) */
         .meta {
             margin-left: 20px;
             padding-top: 40px;
@@ -144,7 +130,6 @@
         }
 
         .meta .subtitle {
-            /* margin-left: 140px; */
             position: relative;
             top: -10px;
             left: 260px;
@@ -168,7 +153,6 @@
             display: inline-block;
         }
 
-        /* RIGHT: specialties + download */
         .aside {
             padding-top: 60px;
             display: flex;
@@ -237,33 +221,23 @@
             font-weight: 700;
         }
 
-        /* Headline typography break to match screenshot */
         .headline-break {
             display: block;
         }
-
-        /* ---------- Scoped: remove white gaps only for component wrappers ---------- */
-
         .component-wrapper {
-            /* keep your inline gradient, ensure it covers area */
             background-repeat: no-repeat;
             background-attachment: scroll;
             background-position: center;
         }
-
-        /* Neutralize Bootstrap .my-5 and section/container margins INSIDE the wrapper,
-   but preserve internal padding so content still breathes */
         .component-wrapper .my-5,
         .component-wrapper section,
         .component-wrapper .container {
             margin-top: 0 !important;
             margin-bottom: 0 !important;
-            /* reintroduce internal spacing as padding (adjust px if you want more/less) */
             padding-top: 48px !important;
             padding-bottom: 48px !important;
         }
 
-        /* Ensure headings inside the component don't add extra top space */
         .component-wrapper h1,
         .component-wrapper h2,
         .component-wrapper h3,
@@ -273,13 +247,11 @@
             margin-top: 0 !important;
         }
 
-        /* If your component uses utility classes like 'py-4' etc, this keeps things consistent */
         .component-wrapper [class*="py-"] {
             padding-top: 0 !important;
             padding-bottom: 0 !important;
         }
 
-        /* Optional: reapply safe vertical spacing via the wrapper's child container instead */
         .component-wrapper>.container,
         .component-wrapper>section {
             padding-top: 48px;
@@ -300,12 +272,10 @@
             width: 20px;
             height: 20px;
             background-color: #0f0f0f;
-            /* same dark bg */
             border: 3px solid #4169E1;
             border-radius: 50%;
         }
 
-        /* responsive */
         @media (max-width:1200px) {
             .meta .name {
                 font-size: 72px;
@@ -366,7 +336,6 @@
     <div class="wrap">
         <div class="shell">
 
-            <!-- header -->
             <header>
                 <div class="brand">Alex River</div>
 
@@ -378,7 +347,6 @@
                     <a href="#education">Education</a>
                 </div>
 
-                <!-- mobile toggle -->
                 <div class="d-lg-none">
                     <button class="btn btn-link p-0" @click="navOpen = !navOpen" aria-label="toggle">
                         <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
@@ -388,7 +356,6 @@
                 </div>
             </header>
 
-            <!-- mobile nav -->
             <div x-show="navOpen" x-cloak class="mb-3 d-lg-none">
                 <a class="d-block py-1" href="#about">About</a>
                 <a class="d-block py-1" href="#skills">Skills</a>
@@ -397,19 +364,15 @@
                 <a class="d-block py-1" href="#education">Education</a>
             </div>
 
-            <!-- HERO -->
             <main class="hero">
 
-                <!-- LEFT: visual stack (blue back, gray mid, image top) -->
                 <div class="visual" aria-hidden="true">
                     <div class="bg-blue" aria-hidden="true"></div>
                     <div class="bg-gray" aria-hidden="true"></div>
 
-                    <!-- DEV image provided for preview. Replace src with your public path -->
                     <img class="profile" src="{{ $shapeImage ?? asset('images/man2.png') }}" alt="Shape frame">
                 </div>
 
-                <!-- CENTER: large name, subtitle, headline -->
                 <div class="meta">
                     <h1 class="name">Alex River</h1>
                     <div class="subtitle">UX/UI Designer</div>
@@ -420,7 +383,6 @@
                     </div>
                 </div>
 
-                <!-- RIGHT: specialties + download -->
                 <aside class="aside">
                     <h3>Specialties</h3>
 
@@ -440,7 +402,6 @@
 
             </main>
 
-            <!-- small Explore modal (same pattern as your provided file) -->
             <div x-show="explore" x-cloak x-transition style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:1500;">
                 <div @click.outside="explore = false" style="width:520px;">
                     <div class="card p-4" style="background:#fff;border:1px solid rgba(0,0,0,0.06);">
@@ -522,7 +483,6 @@
     <div class="component-wrapper" style="background: linear-gradient(to left, #305469, #000000E5); ">
         @include('template_2.components.contact')
     </div>
-    <!-- Bootstrap JS bundle (popper included) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
