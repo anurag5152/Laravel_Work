@@ -13,7 +13,7 @@
 
                 <!-- Right side -->
                 <div class="col-md-8">
-                    <h6 class="fw-bold" style="font-size: 2rem;">{{ $volunteer['organization'] }}</h6>
+                    <h6 class="fw-bold" style="font-size: 2rem; border-bottom: 2px solid white">{{ $volunteer['organization'] }}</h6>
                     <p class="mb-1" style="font-size: 1.5rem;">{{ $volunteer['description'] }}</p>
                     <p class="text-info mb-0">
                         <i class="bi bi-geo-alt-fill" style="font-size: 1.2rem;"></i> {{ $volunteer['location'] }}
