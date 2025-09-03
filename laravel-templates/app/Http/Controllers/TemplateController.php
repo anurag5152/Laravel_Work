@@ -639,4 +639,189 @@ class TemplateController extends Controller
 
         return view('template_3.template_3', compact('summary', 'socials', 'skills', 'education', 'experiences', 'volunteers', 'projects', 'publications', 'awards', 'hobbies', 'references'));
     }
+
+    public function show4()
+    {
+
+        $paragraph = "Passionate copywriter with 4+ years of experience crafting compelling content that converts. 
+        I specialize in creating authentic brand voices that resonate with audiences and drive results. 
+        My approach combines strategic thinking with creative storytelling to deliver copy that not only sounds great but performs even better. 
+        From startups to established brands, I help businesses communicate their value clearly and persuasively. 
+        When I'm not writing, you’ll find me exploring NYC’s coffee scene, reading mystery novels, or planning my next travel adventure.";
+
+        $image = "images/about.png";
+
+        $skills = [
+            ['name' => 'React', 'percent' => 95],
+            ['name' => 'Node.js', 'percent' => 65],
+            ['name' => 'MongoDB', 'percent' => 45],
+            ['name' => 'AWS', 'percent' => 100],
+            ['name' => 'Postman', 'percent' => 85],
+            ['name' => 'Postman', 'percent' => 86],
+            ['name' => 'Postman', 'percent' => 80],
+            ['name' => 'Postman', 'percent' => 28],
+            ['name' => 'Postman', 'percent' => 88],
+            ['name' => 'Postman', 'percent' => 89],
+            ['name' => 'Postman', 'percent' => 81],
+        ];
+
+        $education = [
+            [
+                'institution' => 'Columbia University',
+                'years' => '2016-2020',
+                'degree' => 'Bachelor of Arts - English Literature',
+                'field' => 'English Literature',
+            ],
+            [
+                'institution' => 'Harvard Extension School',
+                'years' => '2021',
+                'degree' => 'Certification - Creative Writing',
+                'field' => 'Short Stories & Essays',
+            ],
+            [
+                'institution' => 'Columbia University',
+                'years' => '2016-2020',
+                'degree' => 'Bachelor of Arts - English Literature',
+                'field' => 'English Literature',
+            ],
+            [
+                'institution' => 'Harvard Extension School',
+                'years' => '2021',
+                'degree' => 'Certification - Creative Writing',
+                'field' => 'Short Stories & Essays',
+            ]
+        ];
+
+        $experiences = [
+            [
+                'role' => 'Senior Freelance Copywriter',
+                'company' => 'Self-Employed',
+                'description' => 'Generated $2M+ in client revenue through copy optimization',
+                'extra' => 'Manage 10+ ongoing client relationships',
+                'date' => '2022 - Present',
+            ],
+            [
+                'role' => 'Content Marketing Specialist',
+                'company' => 'Self-Employed',
+                'description' => 'Generated $2M+ in client revenue through copy optimization',
+                'extra' => 'Manage 10+ ongoing client relationships',
+                'date' => '2021 - 2022',
+            ],
+            [
+                'role' => 'Junior Copy-writer',
+                'company' => 'Self-Employed',
+                'description' => 'Generated $2M+ in client revenue through copy optimization',
+                'extra' => 'Manage 10+ ongoing client relationships',
+                'date' => '2020 - 2021',
+            ],
+        ];
+
+        $projects = [
+            [
+                'title' => 'Tech-writer',
+                'year' => '2022',
+                'link'        => 'https://github.com/johndoe/ecommerce',
+                'tech_stack'  => 'Laravel, PhpWord, Bootstrap, MySQL',
+                'description' => 'Rewrite complete onboarding email sequence resulting in 65% increase in trial-to-paid conversions.',
+                'image' => 'images/edu4.png',
+            ],
+            [
+                'title' => 'E-commerce website copy',
+                'year' => '2022',
+                'link'        => 'https://github.com/johndoe/ecommerce',
+                'tech_stack'  => 'Laravel, PhpWord, Bootstrap, MySQL',
+                'description' => 'Rewrite complete onboarding email sequence resulting in 65% increase in trial-to-paid conversions.',
+                'image' => 'images/edu4.png',
+            ],
+            [
+                'title' => 'Content-marketing',
+                'year' => '2022',
+                'link'        => 'https://github.com/johndoe/ecommerce',
+                'tech_stack'  => 'Laravel, PhpWord, Bootstrap, MySQL',
+                'description' => 'Rewrite complete onboarding email sequence resulting in 65% increase in trial-to-paid conversions.',
+                'image' => 'images/edu4.png',
+            ],
+        ];
+
+        $volunteers = [
+            [
+                'role' => 'Community Mentor',
+                'organization' => 'Open Source Initiative',
+                'description' => 'Guided students in contributing to open-source projects.',
+                'year' => '2023 - Present',
+            ],
+            [
+                'role' => 'Event Organizer',
+                'organization' => 'Tech for Good',
+                'description' => 'Organized annual hackathon for social impact.',
+                'year' => '2021 - 2022',
+            ],
+        ];
+
+        $publications = [
+            [
+                'title' => 'Effective Copywriting Strategies',
+                'description' => 'Exploring modern techniques in persuasive writing.',
+                'publisher' => 'Marketing Weekly',
+                'year' => '2023',
+            ],
+            [
+                'title' => 'Content Marketing in the AI Era',
+                'description' => 'How AI is shaping the future of content.',
+                'publisher' => 'Digital Trends Journal',
+                'year' => '2022',
+            ],
+        ];
+
+        $awards = [
+            [
+                'title' => 'Best Content Strategist',
+                'description' => 'Awarded for outstanding performance in marketing campaigns.',
+                'year' => '2023',
+            ],
+            [
+                'title' => 'Top Copywriter Award',
+                'description' => 'Recognized for excellence in persuasive writing.',
+                'year' => '2022',
+            ],
+        ];
+
+        $hobbies = [
+            [
+                'name' => 'Photography',
+                'description' => 'Capturing moments through the lens.',
+            ],
+            [
+                'name' => 'Traveling',
+                'description' => 'Exploring new cultures and places.',
+            ],
+            [
+                'name' => 'Gaming',
+                'description' => 'Competitive and casual online gaming.',
+            ],
+            [
+                'name' => 'Reading',
+                'description' => 'Enjoying fiction & non-fiction books.',
+            ],
+        ];
+
+        $references = [
+            [
+                'name' => 'Ankit Raj',
+                'position' => 'Assistant Director',
+                'company' => 'Labour Department',
+                'email' => 'ankit.raj@example.com',
+                'phone' => '+91 9876543210',
+            ],
+            [
+                'name' => 'Priya Sharma',
+                'position' => 'HR Manager',
+                'company' => 'Creative Minds Pvt Ltd',
+                'email' => 'priya.sharma@example.com',
+                'phone' => '+91 9123456789',
+            ],
+        ];
+
+        return view('template_4.template_4', compact('paragraph', 'image', 'skills', 'education', 'experiences', 'projects', 'volunteers', 'publications', 'hobbies', 'awards', 'references'));
+    }
 }
