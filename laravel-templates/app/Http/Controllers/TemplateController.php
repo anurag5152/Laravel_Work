@@ -824,4 +824,231 @@ class TemplateController extends Controller
 
         return view('template_4.template_4', compact('paragraph', 'image', 'skills', 'education', 'experiences', 'projects', 'volunteers', 'publications', 'hobbies', 'awards', 'references'));
     }
+    public function show5()
+    {
+        $paragraph = "Passionate copywriter with 4+ years of experience crafting compelling content that converts. 
+        I specialize in creating authentic brand voices that resonate with audiences and drive results. 
+        My approach combines strategic thinking with creative storytelling to deliver copy that not only sounds great but performs even better. 
+        From startups to established brands, I help businesses communicate their value clearly and persuasively. 
+        When I'm not writing, you’ll find me exploring NYC’s coffee scene, reading mystery novels, or planning my next travel adventure.";
+
+        $image = "images/about.png";
+
+        $skills = [
+            [
+                'name' => 'Frontend',
+                'items' => ['HTML', 'CSS', 'JavaScript', 'React', 'Bootstrap']
+            ],
+            [
+                'name' => 'Backend',
+                'items' => ['PHP', 'Laravel', 'Node.js', 'MySQL', 'REST APIs']
+            ],
+            [
+                'name' => 'Tools & Others',
+                'items' => ['Git', 'Docker', 'AWS', 'Figma', 'CI/CD']
+            ],
+            [
+                'name' => 'Frontend',
+                'items' => ['HTML', 'CSS', 'JavaScript', 'React', 'Bootstrap']
+            ],
+            [
+                'name' => 'Backend',
+                'items' => ['PHP', 'Laravel', 'Node.js', 'MySQL', 'REST APIs']
+            ],
+            [
+                'name' => 'Tools & Others',
+                'items' => ['Git', 'Docker', 'AWS', 'Figma', 'CI/CD']
+            ]
+
+        ];
+
+        $education = [
+            [
+                'institution' => 'Columbia University',
+                'years' => '2016-2020',
+                'degree' => 'Bachelor of Arts - English Literature',
+                'field' => 'English Literature',
+            ],
+            [
+                'institution' => 'Harvard Extension School',
+                'years' => '2021',
+                'degree' => 'Certification - Creative Writing',
+                'field' => 'Short Stories & Essays',
+            ],
+            [
+                'institution' => 'Columbia University',
+                'years' => '2016-2020',
+                'degree' => 'Bachelor of Arts - English Literature',
+                'field' => 'English Literature',
+            ],
+            [
+                'institution' => 'Harvard Extension School',
+                'years' => '2021',
+                'degree' => 'Certification - Creative Writing',
+                'field' => 'Short Stories & Essays',
+            ]
+        ];
+
+        $experiences = [
+            [
+                'title'       => 'Senior Full-Stack Developer',
+                'duration'    => 'March 2022 - Present',
+                'job_type'    => 'Full-Time',
+                'company'     => 'TechFlow Solutions',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location'    => 'Newyork'
+            ],
+            [
+                'title'       => 'Software Developer',
+                'duration'    => 'March 2022 - Present',
+                'job_type'    => 'Full-Time',
+                'company'     => 'StartupHub Inc.',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location'    => 'Newyork'
+            ],
+            [
+                'title'       => 'Junior Developer',
+                'duration'    => 'March 2022 - Present',
+                'job_type'    => 'Full-Time',
+                'company'     => 'CodeCraft Agency',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location'    => 'Newyork'
+            ],
+        ];
+
+        $projects = [
+            [
+                'id' => 1,
+                'title' => 'Customer 360 Intelligence',
+                'image' => asset('images/grid-blue.png'),
+                'link' => 'https://github.com/yourusername/project1',
+                'description' => 'A dashboard that integrates customer data across multiple sources to create a 360-degree view for better decision-making.'
+            ],
+            [
+                'id' => 2,
+                'title' => 'Behavioral Blueprint',
+                'image' => asset('images/grid-blue.png'),
+                'link' => 'https://github.com/yourusername/project2',
+                'description' => 'Predictive analytics project for user behavior modeling and journey mapping.'
+            ],
+            [
+                'id' => 3,
+                'title' => 'Lifetime Value Predictor',
+                'image' => asset('images/grid-blue.png'),
+                'link' => 'https://github.com/yourusername/project3',
+                'description' => 'Machine learning model that predicts the lifetime value of customers based on past activity.'
+            ],
+            [
+                'id' => 4,
+                'title' => 'Segment & Scale',
+                'image' => asset('images/grid-blue.png'),
+                'link' => 'https://github.com/yourusername/project4',
+                'description' => 'Tool for customer segmentation and scalable marketing strategies.'
+            ],
+            [
+                'id' => 5,
+                'title' => 'Persona Data Lab',
+                'image' => asset('images/grid-blue.png'),
+                'link' => 'https://github.com/yourusername/project5',
+                'description' => 'Data visualization lab to analyze personas and target audiences effectively.'
+            ],
+            [
+                'id' => 6,
+                'title' => 'Persona Data Lab',
+                'image' => asset('images/grid-blue.png'),
+                'link' => 'https://github.com/yourusername/project5',
+                'description' => 'Data visualization lab to analyze personas and target audiences effectively.'
+            ]
+        ];
+        $volunteers = [
+            [
+                'role' => 'Assistant Director',
+                'organization' => 'Labour Department',
+                'duration' => 'Jan 2022 - Dec 2022',
+                'description' => 'Organized awareness campaigns and helped coordinate labor welfare programs.'
+            ],
+            [
+                'role' => 'Community Teacher',
+                'organization' => 'Local NGO',
+                'duration' => 'Mar 2021 - Nov 2021',
+                'description' => 'Taught underprivileged children mathematics and science on weekends.'
+            ],
+            [
+                'role' => 'Event Coordinator',
+                'organization' => 'TechFest 2020',
+                'duration' => 'Aug 2020 - Feb 2021',
+                'description' => 'Managed volunteer team and logistics for inter-college technical festival.'
+            ],
+        ];
+
+        $publications = [
+            [
+                'title' => 'AI-driven Predictive Models in Healthcare',
+                'authors' => 'John Doe, Jane Smith',
+                'journal' => 'International Journal of AI Research',
+                'year' => '2023',
+                'link' => 'https://example.com/publication1'
+            ],
+            [
+                'title' => 'Big Data Analytics for Customer Insights',
+                'authors' => 'Steven Job, Alan Turing',
+                'journal' => 'Data Science Conference Proceedings',
+                'year' => '2022',
+                'link' => 'https://example.com/publication2'
+            ],
+            [
+                'title' => 'Machine Learning in Marketing Automation',
+                'authors' => 'Michael Scott',
+                'journal' => 'Journal of Business Intelligence',
+                'year' => '2021',
+                'link' => 'https://example.com/publication3'
+            ],
+        ];
+
+        $awards = [
+            [
+                'title' => 'Best Innovator Award',
+                'issuer' => 'TechFest 2022',
+                'year' => '2022',
+                'description' => 'Awarded for developing an AI-powered recommendation system.'
+            ],
+            [
+                'title' => 'Employee of the Year',
+                'issuer' => 'ABC Corp',
+                'year' => '2021',
+                'description' => 'Recognized for outstanding performance in software development.'
+            ],
+            [
+                'title' => 'Top 10 Hackathon Finalist',
+                'issuer' => 'National Hackathon',
+                'year' => '2020',
+                'description' => 'Reached the final round among 500+ teams nationwide.'
+            ],
+        ];
+
+        $hobbies = [
+            [
+                'name' => 'Photography',
+                'icon' => 'bi bi-camera', // Bootstrap Icons
+                'description' => 'Capturing moments and telling stories through images.'
+            ],
+            [
+                'name' => 'Traveling',
+                'icon' => 'bi bi-geo-alt',
+                'description' => 'Exploring new cultures, food, and experiences.'
+            ],
+            [
+                'name' => 'Reading',
+                'icon' => 'bi bi-book',
+                'description' => 'Diving into fiction, non-fiction, and research papers.'
+            ],
+            [
+                'name' => 'Gaming',
+                'icon' => 'bi bi-controller',
+                'description' => 'Playing strategy and adventure games for fun and creativity.'
+            ],
+        ];
+
+        return view('template_5.template_5', compact('paragraph', 'image', 'skills', 'education', 'experiences', 'projects', 'publications', 'volunteers', 'awards', 'hobbies'));
+    }
 }
