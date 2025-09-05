@@ -1051,4 +1051,184 @@ class TemplateController extends Controller
 
         return view('template_5.template_5', compact('paragraph', 'image', 'skills', 'education', 'experiences', 'projects', 'publications', 'volunteers', 'awards', 'hobbies'));
     }
+    public function show6()
+    {
+        $profileSummary = [
+            'title' => 'About me',
+            'description' => "I'm a graphic designer who believes that great design goes beyond aesthetics—it communicates, inspires, and creates connections. With over 5 years in the industry, I've had the privilege of working with diverse clients, from innovative startups to established brands. My approach combines strategic thinking with creative execution. I don't just make things look beautiful; I ensure they serve a purpose and resonate with the intended audience. Whether it's crafting a complete brand identity or designing a single poster, I'm committed to delivering work that makes an impact. When I'm not designing, you can find me exploring art galleries, experimenting with new design trends, or enjoying a good cup of coffee while sketching ideas.",
+            'socials' => [
+                ['icon' => 'bi bi-instagram', 'url' => 'https://instagram.com'],
+                ['icon' => 'bi bi-linkedin', 'url' => 'https://linkedin.com'],
+                ['icon' => 'bi bi-twitter',  'url' => 'https://twitter.com'],
+            ]
+        ];
+
+        $skills = [
+            [
+                'name' => 'Frontend',
+                'items' => ['HTML', 'CSS', 'JavaScript', 'React', 'Bootstrap']
+            ],
+            [
+                'name' => 'Backend',
+                'items' => ['PHP', 'Laravel', 'Node.js', 'MySQL', 'REST APIs']
+            ],
+            [
+                'name' => 'Tools & Others',
+                'items' => ['Git', 'Docker', 'AWS', 'Figma', 'CI/CD']
+            ],
+            [
+                'name' => 'Frontend',
+                'items' => ['HTML', 'CSS', 'JavaScript', 'React', 'Bootstrap']
+            ],
+            [
+                'name' => 'Backend',
+                'items' => ['PHP', 'Laravel', 'Node.js', 'MySQL', 'REST APIs']
+            ],
+            [
+                'name' => 'Tools & Others',
+                'items' => ['Git', 'Docker', 'AWS', 'Figma', 'CI/CD']
+            ]
+
+        ];
+
+        $educations = [
+            [
+                'university' => 'Harvard University',
+                'degree' => 'Bachelor of Design',
+                'year' => '2009 - 2013'
+            ],
+            [
+                'university' => 'Stanford University',
+                'degree' => 'Masters in Graphic Design',
+                'year' => '2013 - 2015'
+            ],
+            [
+                'university' => 'Oxford University',
+                'degree' => 'PhD in Visual Arts',
+                'year' => '2015 - 2019'
+            ]
+        ];
+
+        $projectsLeft = [
+            ['name' => 'Dessert café identity', 'image' => 'images/bgg6.png', 'url' => '#'],
+            ['name' => 'Harvest & Hearth', 'image' => 'images/bgg6.png', 'url' => '#'],
+        ];
+
+        $projectsRight = [
+            ['name' => 'Artesian Bakery Identity', 'image' => 'images/bgg6.png', 'url' => '#'],
+            ['name' => 'NexaTech Solutions', 'image' => 'images/bgg6.png', 'url' => '#'],
+        ];
+
+        $projectsCenter = [
+            'Dessert café identity',
+            'Artesian Bakery Identity',
+            'Harvest & Hearth',
+            'NexaTech Solutions',
+        ];
+
+        $projectsSection = [
+            'title' => 'Projects',
+            'projectsLeft' => $projectsLeft,
+            'projectsCenter' => $projectsCenter,
+            'projectsRight' => $projectsRight,
+        ];
+
+        $experiences = [
+            [
+                'role' => 'Senior Graphic Designer',
+                'company' => 'Creative Studios Inc.',
+                'duration' => '2022 - Present',
+                'description' => 'Lead designer for 15+ brand identity projects, increasing client satisfaction by 30%'
+            ],
+            [
+                'role' => 'Graphic Designer',
+                'company' => 'DesignWorks Ltd.',
+                'duration' => '2018 - 2022',
+                'description' => 'Developed creative assets for over 50 marketing campaigns'
+            ],
+            [
+                'role' => 'Junior Designer',
+                'company' => 'ArtSpace Agency',
+                'duration' => '2015 - 2018',
+                'description' => 'Assisted in UI/UX design and branding projects'
+            ],
+        ];
+
+        $volunteers = [
+            [
+                'role' => 'Community Designer',
+                'organization' => 'Local Arts NGO',
+                'duration' => '2021 - Present',
+                'description' => 'Organized design workshops for underprivileged students'
+            ],
+            [
+                'role' => 'Event Volunteer',
+                'organization' => 'CreativeFest',
+                'duration' => '2019 - 2021',
+                'description' => 'Managed visual branding and stage design'
+            ],
+        ];
+
+        $publications = [
+            [
+                'title' => 'Designing for Social Impact',
+                'journal' => 'Design Journal',
+                'year' => '2022',
+                'summary' => 'Research on how branding influences nonprofit outreach'
+            ],
+            [
+                'title' => 'Minimalism in Modern UI',
+                'journal' => 'Creative Magazine',
+                'year' => '2020',
+                'summary' => 'Article exploring UI trends and their effectiveness'
+            ],
+        ];
+
+        $awards = [
+            [
+                'title' => 'Best Graphic Designer',
+                'organization' => 'Creative Awards',
+                'year' => '2023',
+                'description' => 'Recognized for outstanding brand identity projects.'
+            ],
+            [
+                'title' => 'Innovator Award',
+                'organization' => 'Design Expo',
+                'year' => '2021',
+                'description' => 'Awarded for innovative use of minimalism in UI design.'
+            ],
+        ];
+
+        $hobbies = [
+            [
+                'name' => 'Photography',
+                'description' => 'Capturing street and nature photography during travels.'
+            ],
+            [
+                'name' => 'Sketching',
+                'description' => 'Exploring new design ideas through freehand sketches.'
+            ],
+            [
+                'name' => 'Gaming',
+                'description' => 'Passionate about design-heavy games and storytelling.'
+            ],
+        ];
+        $references = [
+        [
+            'name' => 'Ankit Raj',
+            'position' => 'Assistant Director',
+            'company' => 'Labour Department',
+            'email' => 'ankit.raj@example.com',
+            'phone' => '+91 98765 43210',
+        ],
+        [
+            'name' => 'Sarah Johnson',
+            'position' => 'Creative Lead',
+            'company' => 'DesignHub Inc.',
+            'email' => 'sarah.j@example.com',
+            'phone' => '+1 234 567 890',
+        ],
+    ];
+        return view('template_6.template_6', compact('profileSummary', 'skills', 'educations', 'projectsSection', 'experiences', 'volunteers', 'publications', 'awards', 'hobbies', 'references'));
+    }
 }
