@@ -1214,21 +1214,225 @@ class TemplateController extends Controller
             ],
         ];
         $references = [
-        [
-            'name' => 'Ankit Raj',
-            'position' => 'Assistant Director',
-            'company' => 'Labour Department',
-            'email' => 'ankit.raj@example.com',
-            'phone' => '+91 98765 43210',
-        ],
-        [
-            'name' => 'Sarah Johnson',
-            'position' => 'Creative Lead',
-            'company' => 'DesignHub Inc.',
-            'email' => 'sarah.j@example.com',
-            'phone' => '+1 234 567 890',
-        ],
-    ];
+            [
+                'name' => 'Ankit Raj',
+                'position' => 'Assistant Director',
+                'company' => 'Labour Department',
+                'email' => 'ankit.raj@example.com',
+                'phone' => '+91 98765 43210',
+            ],
+            [
+                'name' => 'Sarah Johnson',
+                'position' => 'Creative Lead',
+                'company' => 'DesignHub Inc.',
+                'email' => 'sarah.j@example.com',
+                'phone' => '+1 234 567 890',
+            ],
+        ];
         return view('template_6.template_6', compact('profileSummary', 'skills', 'educations', 'projectsSection', 'experiences', 'volunteers', 'publications', 'awards', 'hobbies', 'references'));
+    }
+    public function show7()
+    {
+        $paragraph = "I'm a results-driven CEO with over 15 years of experience building and scaling high-growth companies across diverse industries. My journey began in engineering, where I developed a deep appreciation for systematic problem-solving and data-driven decision making. This technical foundation, combined with advanced business training, has enabled me to bridge the gap between innovation and execution.";
+
+        $links = [
+            'twitter' => 'https://twitter.com/yourprofile',
+            'linkedin' => 'https://linkedin.com/in/yourprofile',
+            'instagram' => 'https://instagram.com/yourprofile'
+        ];
+        $skills = [
+            ['name' => 'React', 'percent' => 95],
+            ['name' => 'Node.js', 'percent' => 55],
+            ['name' => 'MongoDB', 'percent' => 100],
+            ['name' => 'AWS', 'percent' => 45],
+            ['name' => 'PostMan', 'percent' => 95],
+            ['name' => 'MongoDB', 'percent' => 100],
+            ['name' => 'AWS', 'percent' => 45],
+            ['name' => 'PostMan', 'percent' => 95],
+        ];
+        $education = [
+            [
+                'institution' => 'Columbia University',
+                'year' => '2016-2020',
+                'degree' => 'Bachelor of Arts - English Literature',
+                'field' => 'English - Literature',
+            ],
+            [
+                'institution' => 'Oxford University',
+                'year' => '2020-2022',
+                'degree' => 'Master of Arts - Creative Writing',
+                'field' => 'Creative Writing',
+            ],
+            [
+                'institution' => 'Oxford University',
+                'year' => '2020-2022',
+                'degree' => 'Master of Arts - Creative Writing',
+                'field' => 'Creative Writing',
+            ]
+        ];
+        $experience = [
+            [
+                'position' => 'Senior Full-Stack Developer',
+                'duration' => 'March 2022 - Present',
+                'company' => 'TechFlow Solutions',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location' => 'New York'
+            ],
+            [
+                'position' => 'Senior Full-Stack Developer',
+                'duration' => 'March 2022 - Present',
+                'company' => 'TechFlow Solutions',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location' => 'New York'
+            ],
+            [
+                'position' => 'Senior Full-Stack Developer',
+                'duration' => 'March 2022 - Present',
+                'company' => 'TechFlow Solutions',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location' => 'New York'
+            ],
+            [
+                'position' => 'Senior Full-Stack Developer',
+                'duration' => 'March 2022 - Present',
+                'company' => 'TechFlow Solutions',
+                'description' => 'Lead development of enterprise-level web applications serving 50K+ daily users',
+                'location' => 'New York'
+            ]
+        ];
+        $projects = [
+            [
+                'title' => 'Expense Tracker',
+                'image' => asset('images/about.png'),
+                'github' => 'https://github.com/yourusername/expense-tracker',
+                'preview' => 'https://yourwebsite.com/expense-tracker'
+            ],
+            [
+                'title' => 'Password Generator',
+                'image' => asset('images/about.png'),
+                'github' => 'https://github.com/yourusername/password-generator',
+                'preview' => 'https://yourwebsite.com/password-generator'
+            ],
+            [
+                'title' => 'Task Manager',
+                'image' => asset('images/about.png'),
+                'github' => 'https://github.com/yourusername/task-manager',
+                'preview' => 'https://yourwebsite.com/task-manager'
+            ],
+            [
+                'title' => 'Task Manager',
+                'image' => asset('images/about.png'),
+                'github' => 'https://github.com/yourusername/task-manager',
+                'preview' => 'https://yourwebsite.com/task-manager'
+            ],
+            [
+                'title' => 'Task Manager',
+                'image' => asset('images/about.png'),
+                'github' => 'https://github.com/yourusername/task-manager',
+                'preview' => 'https://yourwebsite.com/task-manager'
+            ],
+        ];
+        $volunteers = [
+            [
+                'title' => 'Community Mentor',
+                'organization' => 'Tech Mentors Hub',
+                'description' => 'Guided 50+ students in web development and project building.',
+                'date' => 'Jan 2023 – Present',
+                'link' => 'https://techmentorshub.org'
+            ],
+            [
+                'title' => 'Event Volunteer',
+                'organization' => 'CodeFest 2024',
+                'description' => 'Assisted in organizing and managing coding competitions.',
+                'date' => 'Oct 2024',
+                'link' => 'https://codefest2024.org'
+            ]
+        ];
+
+        $publications = [
+            [
+                'title' => 'Optimizing Full-Stack Applications',
+                'publisher' => 'Tech Journal',
+                'description' => 'Published an article on performance optimization techniques for scalable web apps.',
+                'date' => 'June 2023',
+                'link' => 'https://techjournal.com/fullstack-optimization'
+            ],
+            [
+                'title' => 'AI in Frontend Development',
+                'publisher' => 'Dev Weekly',
+                'description' => 'Explored the integration of AI tools in frontend workflow automation.',
+                'date' => 'March 2024',
+                'link' => 'https://devweekly.com/ai-frontend'
+            ]
+        ];
+        $awards = [
+            [
+                'title' => 'Best Full-Stack Developer',
+                'issuer' => 'TechFlow Awards',
+                'date' => 'December 2024',
+                'description' => 'Recognized for exceptional contributions in building scalable web platforms.',
+                'link' => 'https://techflowawards.com/certificate123'
+            ],
+            [
+                'title' => 'Innovation Hackathon Winner',
+                'issuer' => 'CodeSprint',
+                'date' => 'July 2023',
+                'description' => 'Won 1st place for developing an AI-powered project management tool.',
+                'link' => 'https://codesprint.org/winner-list'
+            ]
+        ];
+
+        $hobbies = [
+            [
+                'name' => 'Photography',
+                'emoji' => '📸',
+                'description' => 'Capturing landscapes and city life through my lens.'
+            ],
+            [
+                'name' => 'Gaming',
+                'emoji' => '🎮',
+                'description' => 'Enjoy competitive and strategy games during leisure.'
+            ],
+            [
+                'name' => 'Cycling',
+                'emoji' => '🚴',
+                'description' => 'Weekend rides to explore nature trails and improve endurance.'
+            ],
+            [
+                'name' => 'Reading',
+                'emoji' => '📚',
+                'description' => 'Exploring fiction, tech blogs, and self-growth books.'
+            ]
+        ];
+        $references = [
+            [
+                'name' => 'John Doe',
+                'position' => 'Senior Software Engineer',
+                'company' => 'TechCorp Pvt. Ltd.',
+                'email' => 'john.doe@example.com',
+                'phone' => '+1 987-654-3210'
+            ],
+            [
+                'name' => 'Jane Smith',
+                'position' => 'Project Manager',
+                'company' => 'Innovate Solutions',
+                'email' => 'jane.smith@example.com',
+                'phone' => '+1 876-543-2109'
+            ],
+            [
+                'name' => 'Robert Lee',
+                'position' => 'CTO',
+                'company' => 'FutureTech Inc.',
+                'email' => 'robert.lee@example.com',
+                'phone' => '+1 765-432-1098'
+            ]
+        ];
+        $contact = [
+            'email' => 'example@gmail.com',
+            'whatsapp' => '+91 9876543210',
+            'instagram' => '@yourhandle'
+        ];
+
+        return view('template_7.template_7', compact('paragraph', 'links', 'skills', 'education', 'experience', 'projects', 'publications', 'volunteers', 'hobbies', 'awards', 'references', 'contact'));
     }
 }
