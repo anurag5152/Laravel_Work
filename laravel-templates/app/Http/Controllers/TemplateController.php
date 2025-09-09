@@ -1324,13 +1324,7 @@ class TemplateController extends Controller
                 'image' => asset('images/about.png'),
                 'github' => 'https://github.com/yourusername/task-manager',
                 'preview' => 'https://yourwebsite.com/task-manager'
-            ],
-            [
-                'title' => 'Task Manager',
-                'image' => asset('images/about.png'),
-                'github' => 'https://github.com/yourusername/task-manager',
-                'preview' => 'https://yourwebsite.com/task-manager'
-            ],
+            ]
         ];
         $volunteers = [
             [

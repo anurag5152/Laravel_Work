@@ -205,7 +205,7 @@
                     <div class="profile-card d-inline-block">
                         <div class="box2"></div>
                         <div class="box1"></div>
-                        <img src="{{asset('images/girl7.png')}}" alt="Profile Picture">
+                        <img src="{{asset('images/girl7.png')}}" alt="Profile Pic">
                     </div>
                 </div>
                 <div class="col-12 col-md-7 texta text-md-start">
