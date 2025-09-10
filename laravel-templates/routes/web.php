@@ -26,3 +26,4 @@ Route::get('/template4', [TemplateController::class, 'show4'])->name('resume.sho
 Route::get('/template5', [TemplateController::class, 'show5'])->name('resume.show5');
 Route::get('/template6', [TemplateController::class, 'show6'])->name('resume.show6');
 Route::get('/template7', [TemplateController::class, 'show7'])->name('resume.show7');
+Route::get('/template8', [TemplateController::class, 'show8'])->name('resume.show8');

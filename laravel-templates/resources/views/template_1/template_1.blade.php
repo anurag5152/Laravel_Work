@@ -321,7 +321,7 @@
                     <div class="tag">Your next unicorn startup is just one commit away</div>
 
                     <div class="cta-row">
-                        <a class="download" href="{{ route('resume.show') }}?format=pdf" title="Download CV">
+                        <a class="download"  title="Download CV">
                             <span class="icon" aria-hidden="true">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                                     <path d="M12 3v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />

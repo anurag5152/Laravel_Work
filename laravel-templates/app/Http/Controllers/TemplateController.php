@@ -1429,4 +1429,194 @@ class TemplateController extends Controller
 
         return view('template_7.template_7', compact('paragraph', 'links', 'skills', 'education', 'experience', 'projects', 'publications', 'volunteers', 'hobbies', 'awards', 'references', 'contact'));
     }
+    public function show8()
+    {
+        $summary = "I'm a results-driven CEO with over 15 years of experience building and scaling high-growth companies across diverse industries. My journey began in engineering, where I developed a deep appreciation for systematic problem-solving and data-driven decision making. This technical foundation, combined with advanced business training, has enabled me to bridge the gap between innovation and execution.";
+
+        $email = "alivehire@gmail.com";
+        $skills = [
+            ['name' => 'Data Analytics', 'percentage' => 75],
+            ['name' => 'Digital Transformation', 'percentage' => 90],
+            ['name' => 'Financial Modeling', 'percentage' => 100],
+            ['name' => 'Project Management', 'percentage' => 45],
+            ['name' => 'Project Management', 'percentage' => 55],
+        ];
+        $education = [
+            [
+                'university' => 'Name Of The University',
+                'degree'     => 'Bachelor’s',
+                'year'       => '2009-15',
+            ],
+            [
+                'university' => 'Name Of The University',
+                'degree'     => 'Master’s',
+                'year'       => '2016-18',
+            ],
+            [
+                'university' => 'Another University',
+                'degree'     => 'PhD',
+                'year'       => '2019-23',
+            ],
+        ];
+        $experiences = [
+            [
+                'year'       => '2015–16',
+                'position'   => 'Senior-Software Eng.',
+                'company'    => 'Netflix',
+                'description' => 'Leading backend architecture for streaming platform serving 260M+ global subscribers.'
+            ],
+            [
+                'year'       => '2016–18',
+                'position'   => 'Tech Lead',
+                'company'    => 'Google',
+                'description' => 'Worked on scalable distributed systems for search indexing and ML.'
+            ],
+            [
+                'year'       => '2019–23',
+                'position'   => 'Engineering Manager',
+                'company'    => 'Amazon',
+                'description' => 'Directed a team building high-availability e-commerce systems.'
+            ]
+        ];
+        $projects = [
+            [
+                'id' => 1,
+                'title' => 'Expense Tracker',
+                'description' => 'A web app to track daily expenses with charts.',
+                'github' => 'https://github.com/username/expense-tracker',
+                'image' => asset('images/grid.png')
+            ],
+            [
+                'id' => 2,
+                'title' => 'Task Manager',
+                'description' => 'Manage tasks with priorities and deadlines.',
+                'github' => 'https://github.com/username/task-manager',
+                'image' => asset('images/grid.png')
+            ],
+            [
+                'id' => 3,
+                'title' => 'Password Generator',
+                'description' => 'Secure password generator with strength indicator.',
+                'github' => 'https://github.com/username/password-generator',
+                'image' => asset('images/grid.png')
+            ],
+            [
+                'id' => 4,
+                'title' => 'Password Generator',
+                'description' => 'Secure password generator with strength indicator.',
+                'github' => 'https://github.com/username/password-generator',
+                'image' => asset('images/grid.png')
+            ],
+        ];
+        $volunteer = [
+            [
+                'id' => 1,
+                'organization' => 'Open Source Community',
+                'role' => 'Contributor',
+                'year' => '2023',
+                'description' => 'Contributed to open-source projects by fixing bugs and improving documentation.',
+                'logo' => asset('images/frame.png')
+            ],
+            [
+                'id' => 2,
+                'organization' => 'Local NGO',
+                'role' => 'Event Coordinator',
+                'year' => '2022',
+                'description' => 'Organized charity events and managed volunteers for community initiatives.',
+                'logo' => asset('images/frame.png')
+            ],
+        ];
+        $publications = [
+            [
+                'id' => 1,
+                'title' => 'Deep Learning for Image Recognition',
+                'publisher' => 'IEEE International Conference',
+                'year' => '2023',
+                'description' => 'A study on applying convolutional neural networks for medical image recognition.',
+                'link' => 'https://ieeexplore.ieee.org/document/example'
+            ],
+            [
+                'id' => 2,
+                'title' => 'AI in Financial Forecasting',
+                'publisher' => 'Springer Journal of Data Science',
+                'year' => '2022',
+                'description' => 'Exploring predictive models for stock market trends using machine learning.',
+                'link' => 'https://link.springer.com/article/example'
+            ],
+        ];
+        $awards = [
+            [
+                'id' => 1,
+                'title' => 'Best Innovator Award',
+                'organization' => 'Tech Expo 2023',
+                'year' => '2023',
+                'description' => 'Recognized for developing an AI-powered expense tracking system.',
+                'icon' => asset('images/frame.png')
+            ],
+            [
+                'id' => 2,
+                'title' => 'Outstanding Contributor',
+                'organization' => 'Open Source Community',
+                'year' => '2022',
+                'description' => 'Awarded for significant contributions to multiple open-source projects.',
+                'icon' => asset('images/frame.png')
+            ],
+        ];
+        $hobbies = [
+            [
+                'id' => 1,
+                'name' => 'Photography',
+                'description' => 'Capturing moments and experimenting with creative visuals.',
+                'icon' => asset('images/frame.png')
+            ],
+            [
+                'id' => 2,
+                'name' => 'Reading',
+                'description' => 'Exploring fiction and self-growth books for inspiration.',
+                'icon' => asset('images/frame.png')
+            ],
+            [
+                'id' => 3,
+                'name' => 'Traveling',
+                'description' => 'Discovering new cultures and places across the globe.',
+                'icon' => asset('images/frame.png')
+            ],
+            [
+                'id' => 4,
+                'name' => 'Gaming',
+                'description' => 'Enjoying strategy and adventure games in free time.',
+                'icon' => asset('images/frame.png')
+            ],
+        ];
+        $references = [
+            [
+                'id' => 1,
+                'name' => 'Dr. John Smith',
+                'position' => 'Professor of Computer Science',
+                'organization' => 'ABC University',
+                'email' => 'john.smith@abcuniversity.edu',
+                'phone' => '+91 98765 43210'
+            ],
+            [
+                'id' => 2,
+                'name' => 'Jane Doe',
+                'position' => 'Senior Software Engineer',
+                'organization' => 'TechCorp Pvt Ltd',
+                'email' => 'jane.doe@techcorp.com',
+                'phone' => '+91 91234 56789'
+            ],
+        ];
+        $contact = [
+            'email' => 'alivehire@gmail.com',
+            'phone' => '+914756997955',
+            'address' => 'overseas sector 5, hhkhk, ffhgjh ghghj',
+            'social' => [
+                'twitter' => 'https://twitter.com/yourprofile',
+                'linkedin' => 'https://linkedin.com/in/yourprofile',
+                'instagram' => 'https://instagram.com/yourprofile'
+            ]
+        ];
+
+        return view('template_8.template_8', compact('summary', 'email', 'skills', 'education', 'experiences', 'projects', 'volunteer', 'publications', 'awards', 'hobbies', 'references', 'contact'));
+    }
 }
