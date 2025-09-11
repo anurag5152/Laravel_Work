@@ -265,7 +265,6 @@
 
 </body>
 <script>
-    // run in browser only
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('[data-browser-style]').forEach(function(el) {
             el.style.cssText += el.getAttribute('data-browser-style');

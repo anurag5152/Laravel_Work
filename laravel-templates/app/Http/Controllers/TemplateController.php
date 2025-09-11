@@ -1619,4 +1619,140 @@ class TemplateController extends Controller
 
         return view('template_8.template_8', compact('summary', 'email', 'skills', 'education', 'experiences', 'projects', 'volunteer', 'publications', 'awards', 'hobbies', 'references', 'contact'));
     }
+    public function show9()
+    {
+        $subtitle = "Your next unicorn startup is just one commit away";
+        $description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Reprehenderit est necessitatibus numquam nobis nam, 
+                    perspiciatis accusamus placeat neque. Accusantium molestiae 
+                    odit quasi quod saepe sint quamusto quia illo magnam!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Reprehenderit est necessitatibus numquam nobis nam, 
+                    perspiciatis accusamus placeat neque. Accusantium molestiae 
+                    odit quasi quod saepe sint quamusto quia illo magnam!";
+
+        $experiences = [
+            [
+                'year' => '2015–16',
+                'position' => 'Senior-Software Eng.',
+                'company' => 'Netflix',
+                'description' => 'Leading backend architecture for streaming platform serving 260M+ global subscribers.'
+            ],
+            [
+                'year' => '2016–18',
+                'position' => 'Tech Lead',
+                'company' => 'Google',
+                'description' => 'Worked on scalable distributed systems for search indexing and ML.'
+            ],
+            [
+                'year' => '2019–23',
+                'position' => 'Engineering Manager',
+                'company' => 'Amazon',
+                'description' => 'Directed a team building high-availability e-commerce systems.'
+            ]
+        ];
+        $skills = [
+            ['name' => 'Frontend', 'percentage' => 85],
+            ['name' => 'Backend', 'percentage' => 75],
+            ['name' => 'Database Management', 'percentage' => 90],
+            ['name' => 'DevOps', 'percentage' => 60],
+            ['name' => 'Project Management', 'percentage' => 45],
+            ['name' => 'Project Management', 'percentage' => 2],
+        ];
+        $projects = [
+            [
+                'name'        => 'Analytics Dashboard',
+                'description' => 'Built a real-time analytics platform for monitoring business KPIs across multiple departments.',
+                'image'       => '/images/about.png',
+                'github_link' => 'https://github.com/username/analytics-dashboard'
+            ],
+            [
+                'name'        => 'AI Chatbot',
+                'description' => 'Developed an NLP-based chatbot to automate customer support queries with 85% accuracy.',
+                'image'       => '/images/about.png',
+                'github_link' => 'https://github.com/username/ai-chatbot'
+            ],
+            [
+                'name'        => 'E-commerce Platform',
+                'description' => 'Created a scalable e-commerce solution with microservices architecture and integrated payment systems.',
+                'image'       => '/images/about.png',
+                'github_link' => 'https://github.com/username/ecommerce-platform'
+            ]
+        ];
+
+        $education = [
+            [
+                'university' => 'Columbia University',
+                'degree'     => 'Bachelor of Arts - English Literature',
+                'field'      => 'English - Literature',
+                'year'       => '2016-2020'
+            ],
+            [
+                'university' => 'Harvard University',
+                'degree'     => 'Master of Science - Computer Science',
+                'field'      => 'Machine Learning',
+                'year'       => '2020-2022'
+            ],
+            [
+                'university' => 'MIT',
+                'degree'     => 'PhD - Artificial Intelligence',
+                'field'      => 'Deep Learning',
+                'year'       => '2022-2026'
+            ]
+        ];
+
+        $volunteer = [
+            [
+                'organization' => 'Red Cross',
+                'role' => 'Volunteer Coordinator',
+                'year' => '2020 – 2021',
+                'description' => 'Organized blood donation drives and coordinated 50+ volunteers.'
+            ],
+            [
+                'organization' => 'Local Shelter',
+                'role' => 'Community Helper',
+                'year' => '2018 – 2019',
+                'description' => 'Provided food and basic education support to underprivileged children.'
+            ]
+        ];
+
+        $publications = [
+            [
+                'title' => 'AI in Healthcare',
+                'journal' => 'Journal of Medical Systems',
+                'year' => '2021',
+                'description' => 'Explored the role of AI in predictive diagnostics and hospital efficiency.',
+                'link' => 'https://example.com/publication1'
+            ],
+            [
+                'title' => 'Data-Driven Business',
+                'journal' => 'Harvard Business Review',
+                'year' => '2020',
+                'description' => 'Case studies on how enterprises leverage big data for growth.',
+                'link' => 'https://example.com/publication2'
+            ]
+        ];
+        $awards = [
+            ['title' => 'Best Innovator', 'year' => '2021', 'description' => 'Awarded for outstanding product innovation at Tech Expo.'],
+            ['title' => 'Employee of the Year', 'year' => '2019', 'description' => 'Recognized at Amazon for leading a high-impact project.'],
+            ['title' => 'Employee of the Year', 'year' => '2019', 'description' => 'Recognized at Amazon for leading a high-impact project.']
+        ];
+
+        $hobbies = [
+            ['name' => 'Photography', 'description' => 'Landscape and portrait photography enthusiast.', 'icon' => 'bi bi-camera-fill'],
+            ['name' => 'Traveling', 'description' => 'Exploring cultures and cuisines worldwide.', 'icon' => 'bi bi-globe'],
+            ['name' => 'Chess', 'description' => 'Competed in multiple regional tournaments.', 'icon' => 'bi bi-bricks']
+        ];
+
+        $references = [
+            ['name' => 'John Smith', 'position' => 'CTO', 'company' => 'Google', 'email' => 'john.smith@example.com'],
+            ['name' => 'Mary Johnson', 'position' => 'Director of Engineering', 'company' => 'Amazon', 'email' => 'mary.johnson@example.com']
+        ];
+        $contact = [
+            'email' => 'sandipnarbat111@gmail.com',
+            'whatsapp' => '9876543210',
+            'instagram' => 'sandipnarbat111',
+        ];
+        return view('template_9.template_9', (compact('subtitle', 'description', 'experiences', 'skills', 'projects', 'education', 'volunteer', 'publications','awards', 'hobbies', 'references', 'contact')));
+    }
 }
