@@ -1753,6 +1753,145 @@ class TemplateController extends Controller
             'whatsapp' => '9876543210',
             'instagram' => 'sandipnarbat111',
         ];
-        return view('template_9.template_9', (compact('subtitle', 'description', 'experiences', 'skills', 'projects', 'education', 'volunteer', 'publications','awards', 'hobbies', 'references', 'contact')));
+        return view('template_9.template_9', (compact('subtitle', 'description', 'experiences', 'skills', 'projects', 'education', 'volunteer', 'publications', 'awards', 'hobbies', 'references', 'contact')));
+    }
+    public function show10()
+    {
+        $profileSummary = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Reprehenderit est necessitatibus numquam nobis nam, perspiciatis accusamus placeat neque. 
+        Accusantium molestiae odit quasi quod saepe sint quam iusto quia illo magnam!";
+
+        $skills = [
+            ['name' => 'MongoDB', 'percentage' => 45],
+            ['name' => 'Node.js', 'percentage' => 70],
+            ['name' => 'Express.js', 'percentage' => 60],
+            ['name' => 'React', 'percentage' => 80],
+            ['name' => 'React', 'percentage' => 5],
+        ];
+        $experiences = [
+            [
+                'role' => 'Senior Freelance Copywriter',
+                'company' => 'Self-Employed',
+                'description' => 'Generated $2M+ in client revenue through copy optimization.',
+                'duration' => '2022 - Present',
+            ],
+            [
+                'role' => 'Content Strategist',
+                'company' => 'Creative Agency',
+                'description' => 'Developed high-performing strategies that boosted engagement by 60%.',
+                'duration' => '2020 - 2022',
+            ],
+            [
+                'role' => 'Junior Copywriter',
+                'company' => 'Startup Co.',
+                'description' => 'Wrote compelling ad copy for multiple successful campaigns.',
+                'duration' => '2018 - 2020',
+            ],
+        ];
+        $projects = [
+            [
+                'title' => 'Portfolio Website',
+                'image' => 'about.png',
+                'github' => 'https://github.com/yourusername/portfolio',
+                'preview' => 'https://yourportfolio.com'
+            ],
+            [
+                'title' => 'E-commerce App',
+                'image' => 'about.png',
+                'github' => 'https://github.com/yourusername/ecommerce',
+                'preview' => 'https://ecommerce-demo.com'
+            ],
+            [
+                'title' => 'Chat Application',
+                'image' => 'about.png',
+                'github' => 'https://github.com/yourusername/chatapp',
+                'preview' => 'https://chatapp-demo.com'
+            ],
+        ];
+        $educations = [
+            [
+                'university' => 'Columbia University',
+                'years' => '2016–2020',
+                'degree' => 'Bachelor of Arts - English Literature',
+                'field' => 'English - Literature'
+            ],
+            [
+                'university' => 'Harvard University',
+                'years' => '2012–2016',
+                'degree' => 'Bachelor of Science - Computer Science',
+                'field' => 'Computer Science'
+            ],
+            [
+                'university' => 'MIT',
+                'years' => '2020–2022',
+                'degree' => 'Master of Science - Data Science',
+                'field' => 'Data Science'
+            ],
+            [
+                'university' => 'MIT',
+                'years' => '2020–2022',
+                'degree' => 'Master of Science - Data Science',
+                'field' => 'Data Science'
+            ]
+        ];
+        $volunteers = [
+            [
+                'organization' => 'Red Cross',
+                'years' => '2018–2019',
+                'role' => 'Community Volunteer',
+                'description' => 'Organized health camps and awareness drives.'
+            ],
+            [
+                'organization' => 'UNICEF',
+                'years' => '2020',
+                'role' => 'Event Coordinator',
+                'description' => 'Managed fundraising and outreach programs.'
+            ]
+        ];
+
+        $publications = [
+            [
+                'title' => 'AI in Healthcare',
+                'journal' => 'Journal of Medical AI',
+                'year' => '2021'
+            ],
+            [
+                'title' => 'Data Science for Climate Change',
+                'journal' => 'Nature Climate',
+                'year' => '2022'
+            ]
+        ];
+
+        $awards = [
+            ['title' => 'Best Data Scientist', 'organization' => 'TechConf 2022', 'year' => '2022'],
+            ['title' => 'Research Excellence Award', 'organization' => 'Harvard University', 'year' => '2021'],
+            ['title' => 'Top Innovator', 'organization' => 'Startup Expo', 'year' => '2020'],
+        ];
+
+        $hobbies = [
+            ['name' => 'Photography', 'description' => 'Capturing landscapes and portraits'],
+            ['name' => 'Reading', 'description' => 'Exploring fiction and non-fiction books'],
+            ['name' => 'Cycling', 'description' => 'Long rides during weekends'],
+            ['name' => 'Music', 'description' => 'Playing guitar and composing songs'],
+        ];
+        $references = [
+            [
+                'name' => 'Dr. John Smith',
+                'position' => 'Professor of Computer Science',
+                'company' => 'MIT',
+                'email' => 'john.smith@mit.edu',
+                'phone' => '+1 555 123 4567'
+            ],
+            [
+                'name' => 'Jane Doe',
+                'position' => 'Senior Manager',
+                'company' => 'Google',
+                'email' => 'jane.doe@google.com',
+                'phone' => '+1 555 987 6543'
+            ],
+        ];
+
+
+        return view('template_10.template_10', compact('profileSummary', 'experiences', 'projects', 'educations', 'volunteers', 'publications', 'awards', 'hobbies', 'references', 'skills'));
     }
 }
