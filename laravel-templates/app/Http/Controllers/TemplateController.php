@@ -1886,7 +1886,7 @@ class TemplateController extends Controller
                 'name' => 'Jane Doe',
                 'position' => 'Senior Manager',
                 'company' => 'Google',
-                'email' => 'jane.doe@google.com',
+                'email' => 'john.doe@google.com',
                 'phone' => '+1 555 987 6543'
             ],
         ];

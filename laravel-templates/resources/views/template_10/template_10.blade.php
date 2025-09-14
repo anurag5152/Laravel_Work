@@ -13,7 +13,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Sidebar */
         .sidebar {
             position: fixed;
             top: 0;
@@ -46,7 +45,6 @@
             left: 15%;
         }
 
-        /* Left background */
         .hero-left {
             position: relative;
             color: white;
@@ -60,7 +58,7 @@
 
         .big {
             font-size: 6rem;
-            white-space: nowrap; /* keeps text in one line */
+            white-space: nowrap;
         }
 
         .p2 {
@@ -184,7 +182,6 @@
             }
             .work-box{
                 position: relative;
-                /* top: 10%; */
                 margin-left: -3%;
                 width: 83vw;
                 height: 30vh;
@@ -258,9 +255,6 @@
                 </div>
                 <button class="btn btn-custom">Downlode CV</button>
                 <div class="mt-4 d-flex gap-3">
-                    <!-- Example:
-                    <a href="#"><i class="bi bi-linkedin text-white"></i></a>
-                    -->
                 </div>
             </div>
 
