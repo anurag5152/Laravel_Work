@@ -277,6 +277,11 @@
                 font-size: 44px;
             }
         }
+        @media (max-width: 576px){
+            body{
+                margin-right: -55%;
+            }
+        }
     </style>
 </head>
 

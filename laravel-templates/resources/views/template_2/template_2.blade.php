@@ -34,7 +34,6 @@
             color: #0b0b0b;
         }
 
-
         .wrap {
             display: flex;
             justify-content: center;
@@ -47,6 +46,7 @@
             padding: 0 36px;
             box-sizing: border-box;
         }
+
         header {
             display: flex;
             align-items: center;
@@ -224,11 +224,13 @@
         .headline-break {
             display: block;
         }
+
         .component-wrapper {
             background-repeat: no-repeat;
             background-attachment: scroll;
             background-position: center;
         }
+
         .component-wrapper .my-5,
         .component-wrapper section,
         .component-wrapper .container {
@@ -308,25 +310,101 @@
         @media (max-width:900px) {
             .hero {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
 
             .visual {
                 order: 0;
-                height: 420px;
+                height: auto;
+                min-height: 400px;
+            }
+
+            .visual img.profile {
+                position: relative;
+                width: 100%;
+                height: auto;
+                left: 0;
+                top: 0;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .visual .bg-blue,
+            .visual .bg-gray {
+                display: none;
             }
 
             .meta {
                 order: 1;
                 padding-top: 20px;
+                margin-left: 0;
+                text-align: center;
+                min-height: auto;
+            }
+
+            .meta .name {
+                font-size: 56px;
+                margin: 20px 0 10px;
+            }
+
+            .meta .subtitle {
+                position: static;
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+
+            .meta .headline {
+                margin: 40px auto 0;
+                font-size: 28px;
+                max-width: 100%;
             }
 
             .aside {
                 order: 2;
-                padding-top: 18px;
+                padding-top: 20px;
+                margin: 0 auto;
+                align-items: center;
+                text-align: center;
+            }
+
+            .aside h3 {
+                font-size: 26px;
+            }
+
+            .spec-list li {
+                justify-content: center;
             }
 
             .topnav {
                 display: none;
+            }
+        }
+
+        @media (max-width:576px) {
+            body{
+                margin-right: -55%;
+            }
+            .meta .name {
+                font-size: 42px;
+            }
+
+            .meta .headline {
+                font-size: 22px;
+                margin-top: 20px;
+            }
+
+            .aside h3 {
+                font-size: 22px;
+            }
+
+            .download-btn {
+                padding: 8px 14px;
+                font-size: 14px;
+            }
+
+            .download-btn .icon {
+                width: 28px;
+                height: 28px;
             }
         }
     </style>

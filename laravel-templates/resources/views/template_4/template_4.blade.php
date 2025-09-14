@@ -36,7 +36,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.4; 
+      opacity: 0.4;
       position: absolute;
       top: 0;
       left: 0;
@@ -74,6 +74,83 @@
       background-color: #e4684c;
       color: #fff;
     }
+
+    @media (max-width: 992px) {
+      .hero {
+        margin: 0 20px;
+        height: auto;
+        min-height: 100vh;
+      }
+
+      .hero-content {
+        padding: 60px 20px;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      nav .btn-custom {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: 40px 15px;
+        font-size: 1.2rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+
+      .hero-content p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero {
+        margin: 0 10px;
+      }
+
+      .hero-content {
+        padding: 30px 10px;
+        font-size: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero h2 {
+        font-size: 1.3rem;
+      }
+
+      .hero-content p {
+        font-size: 0.85rem;
+      }
+
+      .hero .btn-custom {
+        width: 100%;
+        padding: 12px;
+      }
+      .hero img{
+        margin-top: 10%;
+        height: 90vh;
+      }
+    }
   </style>
 </head>
 
@@ -88,7 +165,7 @@
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-4" style="font-size: 1.2rem;">
-          <li class="nav-item"><a class="nav-link active" href="#about"  >About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link active" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link active" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link active" href="#projects">Projects</a></li>
@@ -100,8 +177,8 @@
 
     <div class="hero-content">
       <p class="mb-2">Welcome to my Portfolio</p>
-      <h1 style="font-size: 4rem;">I'm Emily Anderson</h1>
-      <h2 style="font-size: 4rem;">Freelance Copywriter</h2>
+      <h1>I'm Emily Anderson</h1>
+      <h2>Freelance Copywriter</h2>
       <p class="mt-4" style="max-width: 500px; font-family: 'Abhaya Libre', serif; font-size: 1rem;">
         Since 2020 we have been working for our clients who want to have a website
         or strengthen their current business through digital marketing. Located in
@@ -113,39 +190,39 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <div id="about">
-        @include('template_4.components.prof-sum', ['paragraph' => $paragraph, 'image' => $image])
-    </div>
-    <div id="skills">
-        @include('template_4.components.skills', ['skills' => $skills])
-    </div>
-    <div id="education">
-        @include('template_4.components.education', ['education' => $education])
-    </div>
-    <div id="experience">
-        @include('template_4.components.experience', ['experiences' => $experiences])
-    </div>
-    <div id="projects">
-        @include('template_4.components.projects', ['projects' => $projects])
-    </div>
-    <div>
-        @include('template_4.components.volunteer', ['volunteers' => $volunteers])
-    </div>
-    <div>
-        @include('template_4.components.publications', ['publications' => $publications])
-    </div>
-    <div>
-        @include('template_4.components.awards', ['awards' => $awards])
-    </div>
-    <div>
-        @include('template_4.components.hobbies', ['hobbies' => $hobbies])
-    </div>
-    <div>
-        @include('template_4.components.references', ['references' => $references])
-    </div>
-    <div>
-        @include('template_4.components.contact')
-    </div>
+  <div id="about">
+    @include('template_4.components.prof-sum', ['paragraph' => $paragraph, 'image' => $image])
+  </div>
+  <div id="skills">
+    @include('template_4.components.skills', ['skills' => $skills])
+  </div>
+  <div id="education">
+    @include('template_4.components.education', ['education' => $education])
+  </div>
+  <div id="experience">
+    @include('template_4.components.experience', ['experiences' => $experiences])
+  </div>
+  <div id="projects">
+    @include('template_4.components.projects', ['projects' => $projects])
+  </div>
+  <div>
+    @include('template_4.components.volunteer', ['volunteers' => $volunteers])
+  </div>
+  <div>
+    @include('template_4.components.publications', ['publications' => $publications])
+  </div>
+  <div>
+    @include('template_4.components.awards', ['awards' => $awards])
+  </div>
+  <div>
+    @include('template_4.components.hobbies', ['hobbies' => $hobbies])
+  </div>
+  <div>
+    @include('template_4.components.references', ['references' => $references])
+  </div>
+  <div>
+    @include('template_4.components.contact')
+  </div>
 </body>
 
 </html>

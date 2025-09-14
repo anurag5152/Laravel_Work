@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template2</title>
+    <title>Template3</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -101,6 +101,14 @@
         .download-btn:hover {
             background: white;
             color: #0b1724;
+        }
+        @media (max-width:576px){
+            body{
+                margin-right: -55%;
+            }
+            .hero-img{
+                left: 5%;
+            }
         }
     </style>
 </head>

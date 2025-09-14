@@ -65,6 +65,12 @@
         .navbar-brand{
             font-size: 2rem;
         }
+        @media (max-width:576px){
+            body{
+                margin-right: -110%;
+                font-size: 2.2rem;
+            }
+        }
     </style>
 </head>
 
@@ -126,7 +132,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <div id="about">
-        @include('template_5.components.prof-sum');
+        @include('template_5.components.prof-sum')
     </div>
     <div id="skills">
         @include('template_5.components.skills', ['skills' => $skills])
