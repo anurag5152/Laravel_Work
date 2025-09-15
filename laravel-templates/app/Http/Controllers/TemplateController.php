@@ -1894,4 +1894,217 @@ class TemplateController extends Controller
 
         return view('template_10.template_10', compact('profileSummary', 'experiences', 'projects', 'educations', 'volunteers', 'publications', 'awards', 'hobbies', 'references', 'skills'));
     }
+    public function show11()
+    {
+        $data = [
+            'bio' => "I'm a results-driven CEO with over 15 years of experience building and scaling high-growth companies across diverse industries. My journey began in engineering, where I developed a deep appreciation for systematic problem-solving and data-driven decision making. This technical foundation, combined with advanced business training, has enabled me to bridge the gap between innovation and execution.",
+
+            'customers' => 30,
+            'experience' => 5,
+
+            'exploreLink' => ('www.google.com'),
+            'cvLink' => asset('files/cv.pdf'),
+
+            'exploreText' => "Explore more",
+            'downloadText' => "Download CV",
+
+            'images' => [
+                asset('images/exp11.png'),
+                asset('images/exp11.png'),
+            ],
+        ];
+        $experiences = [
+            [
+                'role' => 'CEO',
+                'company' => 'Netflix',
+                'years' => '2015-16',
+                'description' => 'I am a results-driven CEO with over 15 years of experience building and scaling high-growth companies across diverse industries. My journey began as a results-driven CEO, building and scaling high-growth companies across diverse sectors.'
+            ],
+            [
+                'role' => 'Lead Designer',
+                'company' => 'Adobe',
+                'years' => '2012-15',
+                'description' => 'Led design teams to create innovative software solutions for creative professionals. Played a crucial role in the development and growth of Adobe Creative Cloud.'
+            ],
+            [
+                'role' => 'Lead Designer',
+                'company' => 'Adobe',
+                'years' => '2012-15',
+                'description' => 'Led design teams to create innovative software solutions for creative professionals. Played a crucial role in the development and growth of Adobe Creative Cloud.'
+            ]
+        ];
+
+        $images = [
+            asset('images/exp11.png'),
+        ];
+
+        $skills = [
+            'Programming Languages' => [
+                'PHP',
+                'JavaScript',
+                'Python',
+                'C++',
+            ],
+            'Databases & Cloud' => [
+                'MySQL',
+                'PostgreSQL',
+                'AWS',
+                'Firebase',
+            ],
+            'Frameworks & Libraries' => [
+                'Laravel',
+                'React',
+                'Vue.js',
+                'Bootstrap',
+            ],
+            'Tools & Practices' => [
+                'Git',
+                'Docker',
+                'Agile/Scrum',
+                'CI/CD',
+            ],
+        ];
+
+        $education = [
+            [
+                'degree' => 'Bachelor of Science in Computer Science',
+                'university' => 'University of ABC',
+                'years' => '2010-2014',
+                'description' => 'Focused on software engineering, algorithms, and data structures. Graduated with honors.'
+            ],
+            [
+                'degree' => 'Master of Science in Software Engineering',
+                'university' => 'University of XYZ',
+                'years' => '2015-2017',
+                'description' => 'Specialized in web development, cloud computing, and software architecture.'
+            ],
+            [
+                'degree' => 'Master of Science in Software Engineering',
+                'university' => 'University of XYZ',
+                'years' => '2015-2017',
+                'description' => 'Specialized in web development, cloud computing, and software architecture.'
+            ],
+            [
+                'degree' => 'Master of Science in Software Engineering',
+                'university' => 'University of XYZ',
+                'years' => '2015-2017',
+                'description' => 'Specialized in web development, cloud computing, and software architecture.'
+            ],
+        ];
+        $projects = [
+            [
+                'title' => 'Expense Tracker',
+                'desc' => 'Mention the tech stack here',
+                'image' => asset('images/exp11.png'),
+                'github' => 'https://github.com/yourusername/expense-tracker',
+                'preview' => 'https://yourpreviewlink.com/expense-tracker'
+            ],
+            [
+                'title' => 'Password Generator',
+                'desc' => 'Mention the tech stack here',
+                'image' => asset('images/exp11.png'),
+                'github' => 'https://github.com/yourusername/password-generator',
+                'preview' => 'https://yourpreviewlink.com/password-generator'
+            ],
+            [
+                'title' => 'Task Manager',
+                'desc' => 'Mention the tech stack here',
+                'image' => asset('images/exp11.png'),
+                'github' => 'https://github.com/yourusername/task-manager',
+                'preview' => 'https://yourpreviewlink.com/task-manager'
+            ]
+        ];
+        $volunteers = [
+            [
+                'title' => 'Community Teaching',
+                'organization' => 'Local NGO',
+                'duration' => '2022 - Present',
+                'description' => 'Helping underprivileged students with basic coding and digital skills.',
+                'image' => asset('images/teaching11.jpg'),
+            ],
+            [
+                'title' => 'Blood Donation Camp',
+                'organization' => 'Red Cross',
+                'duration' => '2021',
+                'description' => 'Organized a local blood donation camp with 50+ donors.',
+                'image' => asset('images/blood11.webp'),
+            ],
+        ];
+
+        $publications = [
+            [
+                'title' => 'AI in Healthcare',
+                'journal' => 'Springer',
+                'year' => '2023',
+                'summary' => 'A research paper exploring AI-driven predictive models in healthcare.',
+                'link' => 'https://example.com/publication1',
+            ],
+            [
+                'title' => 'Blockchain Security',
+                'journal' => 'IEEE',
+                'year' => '2022',
+                'summary' => 'Study on blockchain-based authentication systems.',
+                'link' => 'https://example.com/publication2',
+            ],
+        ];
+        $awards = [
+            ['title' => 'Best Coder', 'description' => 'Won 1st place in coding hackathon', 'year' => '2024'],
+            ['title' => 'Dean’s List', 'description' => 'Awarded for academic excellence', 'year' => '2023'],
+            ['title' => 'Tech Speaker', 'description' => 'Invited to present at tech conference', 'year' => '2022'],
+        ];
+
+        $hobbies = [
+            ['emoji' => '🎨', 'name' => 'Painting', 'description' => 'Expressing creativity with colors'],
+            ['emoji' => '🎮', 'name' => 'Gaming', 'description' => 'Exploring new worlds through games'],
+            ['emoji' => '📚', 'name' => 'Reading', 'description' => 'Diving into books of all genres'],
+            ['emoji' => '🚴', 'name' => 'Cycling', 'description' => 'Staying active and exploring outdoors'],
+        ];
+        $references = [
+            [
+                'name' => 'Arushi Sharma',
+                'position' => 'Senior Software Engineer',
+                'company' => 'Tech Solutions Ltd.',
+                'email' => 'arushi@example.com',
+                'phone' => '+91 9876543210',
+                'note' => 'Guided me during my internship project.'
+            ],
+            [
+                'name' => 'Rahul Verma',
+                'position' => 'Project Manager',
+                'company' => 'Innovate Labs',
+                'email' => 'rahul@example.com',
+                'phone' => '+91 9123456780',
+                'note' => 'Mentor and reference for professional opportunities.'
+            ],
+            [
+                'name' => 'Neha Gupta',
+                'position' => 'Assistant Professor',
+                'company' => 'ABC University',
+                'email' => 'neha@example.com',
+                'phone' => '+91 9988776655',
+                'note' => 'Helped me with academic projects and research work.'
+            ],
+        ];
+        $contacts = [
+            [
+                'type' => 'Email',
+                'icon' => '📧',
+                'value' => 'sandipnarbat111@gmail.com',
+                'link' => 'mailto:sandipnarbat111@gmail.com'
+            ],
+            [
+                'type' => 'Whatsapp',
+                'icon' => '💬',
+                'value' => 'sandipnarbat111@gmail.com',
+                'link' => 'https://wa.me/919999999999' // replace with real number
+            ],
+            [
+                'type' => 'Instagram',
+                'icon' => '📸',
+                'value' => 'sandipnarbat111@gmail.com',
+                'link' => 'https://instagram.com/yourprofile' // replace with real profile
+            ],
+        ];
+        return view('template_11.template_11', compact('data', 'images', 'experiences', 'skills', 'education', 'projects', 'volunteers', 'publications', 'awards', 'hobbies', 'references', 'contacts'));
+    }
 }
