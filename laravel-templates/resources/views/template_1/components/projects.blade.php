@@ -2,8 +2,8 @@
 
     <div class="container" style="color: #4169E1">
         <div class="mb-4 text-center">
-            <h2 class="fw-bold" style="color:#4169E1;">PROJECTS</h2>
-            <hr class="border-2 mx-auto" style="border-color:#4169E1; width:220px;">
+            <h2 class="fw-bold" style="color:#00ff66;">PROJECTS</h2>
+            <hr class="border-2 mx-auto" style="border-color:#00ff66; width:220px;">
         </div>
 
 
@@ -16,8 +16,9 @@
                     <div class="card-body">
                         <h5 class="fw-bold">{{ $project['title'] }}</h5>
                         <p class="mb-2">{{ $project['short_desc'] }}</p>
-                        <p class="text-muted small">{{ $project['tech_stack'] }}</p>
+                        <p class="text-white small">{{ $project['tech_stack'] }}</p>
                         <button class="btn btn-sm btn-primary"
+                        style="background-color: #00ff66; color:black;"
                             data-bs-toggle="modal"
                             data-bs-target="#projectModal{{ $index }}">
                             View Details
@@ -25,8 +26,6 @@
                     </div>
                 </div>
             </div>
-
-            {{-- Modal for Project Details --}}
             <div class="modal fade" id="projectModal{{ $index }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content" style="background-color:#1f2937; color:white; border:2px solid #00ff66;">

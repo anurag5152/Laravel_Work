@@ -8,6 +8,11 @@ class TemplateController extends Controller
 {
     public function show1()
     {
+        $firstname = "Marcus";
+        $secondname = "Thompson";
+        $designation = "Full-Stack Developer";
+        $image= 'images/man.png';
+        $tag = "Your next unicorn startup is just one commit away";
         $summary = "Passionate full-stack developer with 5+ years of experience building scalable 
         web applications and mobile solutions. I specialize in modern JavaScript frameworks, 
         cloud architecture, and creating seamless user experiences that solve real-world problems. 
@@ -22,24 +27,25 @@ class TemplateController extends Controller
 
         $skills = [
             [
-                'category' => 'Programming Languages',
-                'skills_list' => ['PHP', 'JavaScript', 'Python', 'C++']
+                'category' => 'Frontend',
+                'skills_list' => [
+                    ['name' => 'HTML', 'level' => 90],
+                    ['name' => 'CSS', 'level' => 85],
+                ]
             ],
             [
-                'category' => 'Frameworks & Libraries',
-                'skills_list' => ['Laravel', 'React', 'Vue.js', 'Bootstrap']
+                'category' => 'Backend',
+                'skills_list' => [
+                    ['name' => 'PHP', 'level' => 80],
+                    ['name' => 'Node.js', 'level' => 75],
+                ]
             ],
             [
-                'category' => 'Databases & Cloud',
-                'skills_list' => ['MySQL', 'PostgreSQL', 'AWS', 'Firebase']
-            ],
-            [
-                'category' => 'Tools & Practices',
-                'skills_list' => ['Git', 'Docker', 'Agile/Scrum', 'CI/CD']
-            ],
-            [
-                'category' => 'Tools & Practices',
-                'skills_list' => ['Git', 'Docker', 'Agile/Scrum', 'CI/CD']
+                'category' => 'Backend',
+                'skills_list' => [
+                    ['name' => 'PHP', 'level' => 20],
+                    ['name' => 'Node.js', 'level' => 35],
+                ]
             ]
         ];
 
@@ -149,17 +155,37 @@ class TemplateController extends Controller
                 'year'      => '2020',
                 'link'      => 'https://example.com/publication2',
             ],
+            [
+                'title'     => 'Building Scalable Web Apps',
+                'publisher' => 'Tech Journal',
+                'year'      => '2021',
+                'link'      => 'https://example.com/publication1',
+            ],
+            [
+                'title'     => 'AI and The Future',
+                'publisher' => 'AI Magazine',
+                'year'      => '2020',
+                'link'      => 'https://example.com/publication2',
+            ],
         ];
 
         $awards = [
             [
                 'title'       => 'Best Developer Award',
                 'organization' => 'TechFlow Solutions',
+                'desc' => 'I did xyz things',
                 'year'        => '2022',
             ],
             [
                 'title'       => 'Hackathon Winner',
                 'organization' => 'StartupHub',
+                'desc' => 'I did xyz things',
+                'year'        => '2020',
+            ],
+            [
+                'title'       => 'Hackathon Winner',
+                'organization' => 'StartupHub',
+                'desc' => 'I did xyz things',
                 'year'        => '2020',
             ],
         ];
@@ -210,7 +236,7 @@ class TemplateController extends Controller
             ],
         ];
 
-        return view('template_1.template_1', compact('summary', 'twitter', 'linkedin', 'github', 'skills', 'education', 'experiences', 'volunteers', 'publications', 'awards', 'hobbies', 'references', 'projects'));
+        return view('template_1.template_1', compact( 'firstname', 'secondname', 'designation', 'tag', 'image' ,'summary', 'twitter', 'linkedin', 'github', 'skills', 'education', 'experiences', 'volunteers', 'publications', 'awards', 'hobbies', 'references', 'projects'));
     }
 
     public function show2()
@@ -1431,8 +1457,10 @@ class TemplateController extends Controller
     }
     public function show8()
     {
+        $name = "Nakul Raj";
         $summary = "I'm a results-driven CEO with over 15 years of experience building and scaling high-growth companies across diverse industries. My journey began in engineering, where I developed a deep appreciation for systematic problem-solving and data-driven decision making. This technical foundation, combined with advanced business training, has enabled me to bridge the gap between innovation and execution.";
-
+        $designation ="CEO ALIVE HIRE PVT. LTD.";
+        $image = 'images/man8.png';
         $email = "alivehire@gmail.com";
         $skills = [
             ['name' => 'Data Analytics', 'percentage' => 75],
@@ -1617,7 +1645,7 @@ class TemplateController extends Controller
             ]
         ];
 
-        return view('template_8.template_8', compact('summary', 'email', 'skills', 'education', 'experiences', 'projects', 'volunteer', 'publications', 'awards', 'hobbies', 'references', 'contact'));
+        return view('template_8.template_8', compact('name', 'designation', 'image', 'summary', 'email', 'skills', 'education', 'experiences', 'projects', 'volunteer', 'publications', 'awards', 'hobbies', 'references', 'contact'));
     }
     public function show9()
     {
@@ -2096,15 +2124,239 @@ class TemplateController extends Controller
                 'type' => 'Whatsapp',
                 'icon' => '💬',
                 'value' => 'sandipnarbat111@gmail.com',
-                'link' => 'https://wa.me/919999999999' // replace with real number
+                'link' => 'https://wa.me/919999999999'
             ],
             [
                 'type' => 'Instagram',
                 'icon' => '📸',
                 'value' => 'sandipnarbat111@gmail.com',
-                'link' => 'https://instagram.com/yourprofile' // replace with real profile
+                'link' => 'https://instagram.com/yourprofile'
             ],
         ];
         return view('template_11.template_11', compact('data', 'images', 'experiences', 'skills', 'education', 'projects', 'volunteers', 'publications', 'awards', 'hobbies', 'references', 'contacts'));
+    }
+    public function show12()
+    {
+        $name = "Roger Felix";
+        $role = "UI & UX Designer";
+        $desc = "I'm a results-driven CEO with over 15 years of experience building and scaling
+                high-growth companies across diverse industries. My journey began in engineering,
+                where I developed a deep appreciation.";
+        $socials = [
+            "https://twitter.com/rogerfelix",
+            "https://instagram.com/rogerfelix",
+            "https://linkedin.com/in/rogerfelix"
+        ];
+        $about = [
+            "image" => "/images/about12.png",
+            "description" => "I'm a results-driven CEO with over 15 years of experience 
+            building and scaling high-growth companies across diverse industries. 
+            My journey began in engineering, where I developed a deep appreciation 
+            for systematic problem-solving and data-driven decision making.",
+            "skills" => [
+                ["name" => "Leadership", "value" => 70],
+                ["name" => "Strategy", "value" => 85],
+                ["name" => "Problem Solving", "value" => 90],
+                ["name" => "Execution", "value" => 60],
+            ]
+        ];
+        $skills = [
+            [
+                'category' => 'Frontend',
+                'skills_list' => [
+                    ['name' => 'HTML', 'level' => 90],
+                    ['name' => 'CSS', 'level' => 85],
+                ]
+            ],
+            [
+                'category' => 'Backend',
+                'skills_list' => [
+                    ['name' => 'PHP', 'level' => 80],
+                    ['name' => 'Node.js', 'level' => 75],
+                ]
+            ],
+            [
+                'category' => 'Backend',
+                'skills_list' => [
+                    ['name' => 'PHP', 'level' => 20],
+                    ['name' => 'Node.js', 'level' => 35],
+                ]
+            ]
+        ];
+        $description = "Every project tells a story of problem-solving, creativity, and user-centered design. Here's a collection of my recent work where I've transformed complex challenges into intuitive digital experiences.";
+
+        $projects = [
+            [
+                'title' => 'E-Commerce Design',
+                'description' => 'A modern shopping experience with clean UI and smooth navigation.',
+                'link' => 'https://example.com/project1',
+                'image' => '/images/about12.png'
+            ],
+            [
+                'title' => 'Pet Care Platform',
+                'description' => 'A user-friendly platform for pet owners to connect with services.',
+                'link' => 'https://example.com/project1',
+                'image' => '/images/about12.png'
+            ],
+            [
+                'title' => 'Creative Portfolio',
+                'description' => 'A vibrant showcase for designers and artists.',
+                'link' => 'https://example.com/project1',
+                'image' => '/images/about12.png'
+            ]
+        ];
+        $experiences = [
+            [
+                'title' => 'Experience Designer',
+                'company' => 'Google',
+                'year' => '2009–15',
+                'description' => "I'm a results-driven designer with experience building and scaling delightful products."
+            ],
+            [
+                'title' => 'UI/UX Designer',
+                'company' => 'Google',
+                'year' => '2009–15',
+                'description' => "Specialized in interaction design and prototyping for complex systems."
+            ],
+            [
+                'title' => 'Lead UI Designer',
+                'company' => 'Google',
+                'year' => '2009–15',
+                'description' => "Led a team designing consistent visual systems and component libraries."
+            ],
+            [
+                'title' => 'Senior Product Designer',
+                'company' => 'Google',
+                'year' => '2009–15',
+                'description' => "Focused on product strategy, research and design ops."
+            ],
+            [
+                'title' => 'Senior Product Designer',
+                'company' => 'Google',
+                'year' => '2009–15',
+                'description' => "Focused on product strategy, research and design ops."
+            ],
+        ];
+
+        $educations = [
+            [
+                'university' => 'Name of the University',
+                'degree' => "Bachelor's",
+                'year' => '2009–15'
+            ],
+            [
+                'university' => 'Name of the University',
+                'degree' => "Bachelor's",
+                'year' => '2009–15'
+            ],
+            [
+                'university' => 'Name of the University',
+                'degree' => "Bachelor's",
+                'year' => '2009–15'
+            ],
+            [
+                'university' => 'Name of the University',
+                'degree' => "Master's",
+                'year' => '2016–18'
+            ],
+        ];
+        $volunteers = [
+            [
+                'emoji' => '🤝',
+                'role' => 'Community Mentor',
+                'organization' => 'Local Tech Hub',
+                'year' => '2020–Present',
+                'description' => 'Guided young developers through coding bootcamps and career growth.'
+            ],
+            [
+                'emoji' => '🎨',
+                'role' => 'Volunteer Designer',
+                'organization' => 'Non-Profit Org',
+                'year' => '2018–2020',
+                'description' => 'Created posters and digital content for awareness campaigns.'
+            ],
+            [
+                'emoji' => '🌱',
+                'role' => 'Environment Advocate',
+                'organization' => 'Green Earth Group',
+                'year' => '2017–2019',
+                'description' => 'Organized tree plantation drives and eco-friendly workshops.'
+            ]
+        ];
+
+        $publications = [
+            [
+                'title' => 'Designing for Accessibility',
+                'journal' => 'UX Today',
+                'year' => '2021',
+                'summary' => 'An article discussing inclusive practices for modern UI/UX.',
+                'link' => 'https://example.com/publication1'
+            ],
+            [
+                'title' => 'The Future of Interaction Design',
+                'journal' => 'Interaction Journal',
+                'year' => '2020',
+                'summary' => 'Research on next-gen design systems and adaptive interfaces.',
+                'link' => 'https://example.com/publication2'
+            ],
+            [
+                'title' => 'Scaling Design Teams',
+                'journal' => 'DesignOps Weekly',
+                'year' => '2019',
+                'summary' => 'Best practices for managing large design teams effectively.',
+                'link' => 'https://example.com/publication3'
+            ]
+        ];
+        $awards = [
+            [
+                'title' => 'Best UI Designer',
+                'organization' => 'Design Awards',
+                'year' => '2021',
+                'description' => 'Recognized for excellence in UI/UX design.'
+            ],
+            [
+                'title' => 'Hackathon Winner',
+                'organization' => 'Tech Fest',
+                'year' => '2020',
+                'description' => 'Won 1st place for an AI-powered project.'
+            ]
+        ];
+
+        $hobbies = [
+            [
+                'emoji' => '🎸',
+                'name' => 'Guitar',
+                'description' => 'Playing acoustic and electric guitar.'
+            ],
+            [
+                'emoji' => '📸',
+                'name' => 'Photography',
+                'description' => 'Capturing travel and nature moments.'
+            ],
+            [
+                'emoji' => '⚽',
+                'name' => 'Football',
+                'description' => 'Playing and following football regularly.'
+            ],
+            [
+                'emoji' => '🎨',
+                'name' => 'Painting',
+                'description' => 'Exploring abstract and digital art.'
+            ]
+        ];
+
+        $references = [
+            [
+                'name' => 'John Doe',
+                'position' => 'Creative Director at XYZ Agency',
+                'quote' => 'An exceptionally talented professional who brings creativity and dedication to every project.'
+            ],
+            [
+                'name' => 'Jane Smith',
+                'position' => 'CTO at InnovateTech',
+                'quote' => 'A reliable and innovative designer who consistently delivers beyond expectations.'
+            ]
+        ];
+        return view('template_12.template_12', compact('name', 'role', 'desc', 'socials', 'about', 'skills', 'description', 'projects', 'experiences', 'educations', 'volunteers', 'publications', 'awards', 'hobbies', 'references'));
     }
 }

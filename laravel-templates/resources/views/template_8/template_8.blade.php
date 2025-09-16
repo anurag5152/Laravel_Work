@@ -155,10 +155,12 @@
             .pub-border {
                 margin-left: 30%;
             }
-            .award-title{
+
+            .award-title {
                 text-align: center;
             }
-            .award-border{
+
+            .award-border {
                 margin-left: 35%;
             }
         }
@@ -169,7 +171,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark px-5">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Nakul Raj</a>
+            <a class="navbar-brand" href="#">{{$name}}</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -191,14 +193,14 @@
         <div class="row align-items-center">
             <div class="col-md-6 hero-text">
                 <p>WELCOME</p>
-                <h1>I’m Nakul Raj</h1>
-                <p>CEO ALIVE HIRE PVT. LTD.</p>
+                <h1>{{$name}}</h1>
+                <p>{{$designation}}</p>
                 <button class="btn btn-cv mt-3 px-4 py-2">Download CV</button>
             </div>
-
             <div class="col-md-6 hero-img-box">
-                <img src="{{asset('images/man8.png')}}" alt="Profile Image">
+                <img src="{{ asset($image) }}" alt="Profile Image">
             </div>
+
         </div>
 
         <div class="row text-center stats">
@@ -256,4 +258,5 @@
 <div>
     @include('template_8.components.contact', ['contact' => $contact])
 </div>
+
 </html>

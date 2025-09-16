@@ -1,6 +1,5 @@
 <section class="container-fluid py-5 position-relative" style="background-color:black; color:white;">
 
-    {{-- Right side images --}}
     <img src="{{ asset('images/boxes.png') }}"
         class="position-absolute top-0 end-0 translate-middle-x"
         style="z-index: 0; opacity: 0.1; width: 120%; max-width: 300px;">
